@@ -347,18 +347,21 @@ def pg_compras():
     df = ler("pncp_contratacoes.csv")
     if df is None:
         return faltando("pncp_contratacoes.csv", "coleta/pncp.py")
-    from analises import contratacoes_validas
+    # Filtro feito aqui mesmo (sem importar de analises.py): no Streamlit Cloud, após um redeploy "a quente",
+    # módulos já importados podem ficar em cache na versão antiga e a importação de um nome novo falha.
     incluir = st.toggle("Incluir revogadas/anuladas/suspensas", value=False)
     f = df[df["ano"] == ANO]
-    if not incluir:
-        f = contratacoes_validas(f)
+    n_publicadas = len(f)
+    if not incluir and "situacao" in f:
+        f = f[~f["situacao"].astype(str).isin(("Revogada", "Anulada", "Suspensa"))]
     if "unidadeOrgao" in f:
         unidades = st.sidebar.multiselect("Unidade/órgão (PNCP)", sorted(df["unidadeOrgao"].dropna().unique()))
         if unidades:
             f = f[f["unidadeOrgao"].isin(unidades)]
     if f.empty:
         return st.info(f"Nenhuma contratação de {ANO} no arquivo do PNCP.")
-    kpis([("Contratações", num(len(f))),
+    kpis([("Contratações publicadas", num(n_publicadas), "Todas as publicadas no PNCP no ano, em qualquer situação"),
+          ("Consideradas nas somas", num(len(f)), "Exclui revogadas, anuladas e suspensas (use a chave acima para incluir)"),
           ("Valor estimado", brl_curto(f["valorEstimado"].sum()), brl(f["valorEstimado"].sum())),
           ("Valor homologado", brl_curto(f["valorHomologado"].sum()), brl(f["valorHomologado"].sum()))])
     c1, c2 = st.columns(2)
