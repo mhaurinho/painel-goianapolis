@@ -18,7 +18,9 @@ esporte e meio ambiente não têm indicadores municipais de resultado. IPTU, ISS
 ## Páginas
 Visão geral · Despesas (filtro por função de governo) · Receitas e tributos (IPTU/ISS/ITBI) · Pessoal (LRF) ·
 Transferências (emendas especiais) · Compras (filtro por unidade/órgão do PNCP) · Saúde · Educação ·
-Demais áreas · **Auditoria** · **Conciliação** · Sobre os dados.
+Demais áreas · **Alertas** · **Auditoria** · **Conciliação** · **Fornecedores** · **Projeção** · **Capilaridade** · **Denúncia anônima** · Sobre os dados.
+
+A página **Denúncia anônima** não grava, envia nem registra nada: apenas monta um texto na tela e aponta para os canais oficiais (TCM-GO, Fala.BR/CGU, MPGO).
 
 O **ano** escolhido na barra lateral vale para todas as páginas.
 
