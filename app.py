@@ -200,10 +200,26 @@ def pg_visao():
           ("Receita per capita", brl(rec / pop) if rec else "n/d")])
     if per < 6:
         st.caption(f"{ANO}: dados acumulados até o {per}º bimestre.")
-    dpf = despesa_por_funcao()
-    if dpf is not None:
-        x = dpf[dpf["exercicio"] == ANO].sort_values("valor", ascending=False)
-        grafico(px.treemap(x, path=["area"], values="valor", title=f"Despesa liquidada por área em {ANO}"), None)
+    c1, c2 = st.columns([3, 2])
+    with c1:
+        dpf = despesa_por_funcao()
+        if dpf is not None:
+            x = dpf[dpf["exercicio"] == ANO].sort_values("valor", ascending=False)
+            fig = px.treemap(x, path=["area"], values="valor", title=f"Despesa liquidada por área em {ANO}")
+            fig.update_traces(texttemplate="%{label}<br>%{percentRoot:.1%}",
+                              hovertemplate="%{label}: R$ %{value:,.2f}<extra></extra>")
+            grafico(fig, None)
+    with c2:
+        serie = []
+        for ano_, dd in d[d["exercicio"] <= ANO].groupby("exercicio"):
+            for rot, cnt, col in (("Receita", "RECEITAS (EXCETO INTRA", "Até o Bimestre"),
+                                  ("Despesa liquidada", "DESPESAS (EXCETO INTRA", "LIQUIDADAS ATÉ O BIMESTRE")):
+                x = dd[dd["conta"].astype(str).str.startswith(cnt) & dd["coluna"].astype(str).str.contains(col, case=False)]
+                if len(x):
+                    serie.append({"ano": ano_, "tipo": rot, "valor": float(x["valor"].iloc[0])})
+        if serie:
+            grafico(px.line(pd.DataFrame(serie), x="ano", y="valor", color="tipo", markers=True,
+                            title="Receita × despesa", labels={"valor": "R$", "ano": "Ano", "tipo": ""}))
 
 
 def pg_despesas():
@@ -252,6 +268,8 @@ def pg_receitas():
               "RECEITAS DE CAPITAL"]
     x = d[d["conta"].isin(contas) & d["coluna"].astype(str).str.contains("Até o Bimestre", case=False)]
     x = ate_ano(x.groupby(["exercicio", "conta"], as_index=False)["valor"].max())
+    x["conta"] = x["conta"].replace({"RECEITAS CORRENTES": "Receitas correntes", "RECEITAS DE CAPITAL": "Receitas de capital",
+                                     "OUTRAS RECEITAS CORRENTES": "Outras receitas correntes"})
     grafico(px.bar(x, x="exercicio", y="valor", color="conta", barmode="group", title="Receitas realizadas por ano",
                    labels={"valor": "R$", "exercicio": "Ano", "conta": ""}))
     st.subheader("Arrecadação própria: IPTU, ISS e ITBI")
@@ -469,4 +487,23 @@ PAGINAS = {"Visão geral": pg_visao, "Despesas": pg_despesas, "Receitas e tribut
            "Pessoal (LRF)": pg_pessoal, "Transferências": pg_transferencias, "Compras": pg_compras,
            "Saúde": pg_saude, "Educação": pg_educacao, "Demais áreas": pg_demais, "Auditoria": pg_auditoria, "Conciliação": pg_conciliacao, "Sobre os dados": pg_sobre}
 escolha = st.sidebar.radio("Páginas", list(PAGINAS))
+
+
+def rodape_sidebar():
+    linhas = []
+    a1 = ler("siconfi_rreo_anexo01.csv")
+    if a1 is not None:
+        ult = a1.sort_values(["exercicio", "periodo"]).iloc[-1]
+        linhas.append(f"SICONFI: até o {int(ult['periodo'])}º bimestre de {int(ult['exercicio'])}")
+    c = ler("pncp_contratacoes.csv")
+    if c is not None and "dataPublicacao" in c:
+        dt = pd.to_datetime(c["dataPublicacao"], errors="coerce").max()
+        if pd.notna(dt):
+            linhas.append(f"PNCP: última publicação em {dt:%d/%m/%Y}")
+    st.sidebar.divider()
+    st.sidebar.caption("**Dados disponíveis**  \n" + "  \n".join(linhas) +
+                       "  \n[Código e fontes no GitHub](https://github.com/mhaurinho/painel-goianapolis)")
+
+
+rodape_sidebar()
 PAGINAS[escolha]()
