@@ -43,3 +43,6 @@ streamlit run app.py
 - `coleta/`: scripts de coleta das APIs
 - `dados/`: CSVs e lista de fontes
 - `docs/esboco.md`: esboço do painel e o levantamento de fontes
+
+## Deploy em VPS própria
+Veja `deploy/README-VPS.md` (systemd + nginx na porta 8080).

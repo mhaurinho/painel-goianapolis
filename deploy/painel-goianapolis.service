@@ -1,0 +1,15 @@
+[Unit]
+Description=Painel Goianapolis em Numeros (Streamlit)
+After=network.target
+
+[Service]
+Type=simple
+User=painel
+Group=painel
+WorkingDirectory=/opt/painel-goianapolis
+ExecStart=/opt/painel-goianapolis/.venv/bin/streamlit run app.py --server.address 127.0.0.1 --server.port 8501 --server.headless true --browser.gatherUsageStats false
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
