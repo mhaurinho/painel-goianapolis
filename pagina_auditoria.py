@@ -111,7 +111,7 @@ def pagina(ANO: int, despesa_por_funcao):
     if d is None:
         return faltando("siconfi_rreo_anexo02.csv", "coleta/siconfi.py")
     anos = sorted(set(c["ano"]) & set(d["exercicio"])) if todos else [ANO]
-    gasto = d[d["exercicio"].isin(anos)].groupby("area", as_index=False)["valor"].sum()
+    gasto = d[d["exercicio"].isin(anos) & (d["area"] != "Outras funções")].groupby("area", as_index=False)["valor"].sum()
     contr = c[c["ano"].isin(anos)].groupby("area", as_index=False).agg(
         contratacoes=("objeto", "size"), homologado=("valorHomologado", "sum"))
     m = gasto.merge(contr, on="area", how="left").fillna({"contratacoes": 0, "homologado": 0})

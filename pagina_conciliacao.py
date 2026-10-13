@@ -123,7 +123,7 @@ def pagina(ANO: int, despesa_por_funcao):
     for ano in anos:
         r = e[e["exercicio"] == ano].iloc[0]
         fator = r["contratavel"] / r["liquidada"] if r["liquidada"] else 0  # parcela não-pessoal/não-dívida
-        da = d[d["exercicio"] == ano]
+        da = d[(d["exercicio"] == ano) & (d["area"] != "Outras funções")]  # legislativo, previdência, encargos
         pa = c[c["ano"] == ano].groupby("area")["valorHomologado"].sum()
         for _, x in da.iterrows():
             linhas.append({"ano": ano, "area": x["area"], "liquidado": x["valor"],

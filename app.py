@@ -26,37 +26,65 @@ def rreo_final(df: pd.DataFrame) -> pd.DataFrame:
     return df[df["periodo"] == ult]
 
 
+# As 28 funções de governo (Portaria MOG 42/1999); as demais linhas do Anexo 02 são subfunções.
+FUNCOES = ["Legislativa", "Judiciária", "Essencial à Justiça", "Administração", "Defesa Nacional",
+           "Segurança Pública", "Relações Exteriores", "Assistência Social", "Previdência Social", "Saúde",
+           "Trabalho", "Educação", "Cultura", "Direitos da Cidadania", "Urbanismo", "Habitação", "Saneamento",
+           "Gestão Ambiental", "Ciência e Tecnologia", "Agricultura", "Organização Agrária", "Indústria",
+           "Comércio e Serviços", "Comunicações", "Energia", "Transporte", "Desporto e Lazer", "Encargos Especiais"]
+
+
 @st.cache_data
-def despesa_por_funcao() -> pd.DataFrame | None:
+def anexo02_liquidado() -> pd.DataFrame | None:
+    """Linhas do Anexo 02 (despesa liquidada, exceto intraorçamentária) já com a função de cada subfunção."""
     a2 = ler("siconfi_rreo_anexo02.csv")
     if a2 is None:
         return None
     d = rreo_final(a2)
-    d = d[d["coluna"].astype(str).str.contains("LIQUIDADAS ATÉ O BIMESTRE", case=False, na=False)]
-    d = d[d["conta"].isin(sum(AREAS.values(), []))]
-    d = d.groupby(["exercicio", "conta"], as_index=False)["valor"].max()
+    d = d[d["coluna"].astype(str).str.startswith("DESPESAS LIQUIDADAS ATÉ O BIMESTRE")]
+    if "rotulo" in d:
+        d = d[d["rotulo"].astype(str).str.contains("Exceto Intra", case=False)]
+    linhas, atual = [], None
+    for _, r in d.iterrows():
+        conta = str(r["conta"])
+        if conta.upper().startswith(("DESPESAS", "TOTAL")) or "TOTAL" in conta.upper():
+            atual = None
+            continue
+        if conta in FUNCOES:
+            atual = conta
+            linhas.append({"exercicio": r["exercicio"], "funcao": conta, "subfuncao": None, "valor": r["valor"]})
+        elif atual:
+            linhas.append({"exercicio": r["exercicio"], "funcao": atual, "subfuncao": conta, "valor": r["valor"]})
+    return pd.DataFrame(linhas)
+
+
+@st.cache_data
+def total_rreo2() -> pd.Series | None:
+    a2 = ler("siconfi_rreo_anexo02.csv")
+    if a2 is None:
+        return None
+    d = rreo_final(a2)
+    d = d[d["coluna"].astype(str).str.startswith("DESPESAS LIQUIDADAS ATÉ O BIMESTRE")
+          & d["conta"].astype(str).str.startswith("DESPESAS (EXCETO INTRA")]
+    return d.groupby("exercicio")["valor"].first()
+
+
+@st.cache_data
+def despesa_por_funcao() -> pd.DataFrame | None:
+    """Despesa liquidada por área. Funções fora de AREAS entram em "Outras funções", e o total fecha com o RREO."""
+    base = anexo02_liquidado()
+    if base is None:
+        return None
+    f = base[base["subfuncao"].isna()].groupby(["exercicio", "funcao"], as_index=False)["valor"].sum()
     inv = {c: a for a, cs in AREAS.items() for c in cs}
-    d["area"] = d["conta"].map(inv)
-    return d.groupby(["exercicio", "area"], as_index=False)["valor"].sum()
+    f["area"] = f["funcao"].map(inv).fillna("Outras funções")
+    return f.groupby(["exercicio", "area"], as_index=False)["valor"].sum()
 
 
 @st.cache_data
 def subfuncoes() -> pd.DataFrame | None:
-    """Despesa liquidada por subfunção, com a função (área) de origem pela ordem das linhas do RREO."""
-    a2 = ler("siconfi_rreo_anexo02.csv")
-    if a2 is None:
-        return None
-    d = rreo_final(a2)
-    d = d[d["coluna"].astype(str).str.contains("LIQUIDADAS ATÉ O BIMESTRE", case=False, na=False)]
-    funcoes = set(sum(AREAS.values(), []))
-    linhas, atual = [], None
-    for _, r in d.iterrows():
-        conta = str(r["conta"])
-        if conta in funcoes:
-            atual = conta
-        elif atual and "DESPESAS" not in conta.upper():
-            linhas.append({"exercicio": r["exercicio"], "funcao": atual, "subfuncao": conta, "valor": r["valor"]})
-    return pd.DataFrame(linhas)
+    base = anexo02_liquidado()
+    return None if base is None else base[base["subfuncao"].notna()].reset_index(drop=True)
 
 
 @st.cache_data
@@ -191,6 +219,10 @@ def pg_despesas():
     da = d[d["exercicio"] == ANO].sort_values("valor")
     if da.empty:
         return st.info(f"Sem dados de {ANO}.")
+    tot = total_rreo2()
+    if not areas and tot is not None and ANO in tot.index:
+        dif = da["valor"].sum() - tot[ANO]
+        st.caption(f"Conferência: soma das funções = total do RREO Anexo 02 ({brl(tot[ANO])}); diferença {brl(dif)}.")
     kpis([("Total das áreas exibidas", brl_curto(da["valor"].sum()), brl(da["valor"].sum())),
           ("Maior área", da.iloc[-1]["area"]), ("Per capita (total exibido)", brl(da["valor"].sum() / pop_ano(ANO)))])
     grafico(px.bar(da, x="valor", y="area", orientation="h", title=f"Despesa liquidada por área em {ANO}",
@@ -201,7 +233,8 @@ def pg_despesas():
     if sf is not None and not sf.empty:
         s = sf[sf["exercicio"] == ANO]
         if areas:
-            s = s[s["funcao"].isin(sum((AREAS[a] for a in areas), []))]
+            outras = [f for f in FUNCOES if f not in sum(AREAS.values(), [])]
+            s = s[s["funcao"].isin(sum((AREAS.get(a, outras) for a in areas), []))]
         s = s[s["valor"] > 0].sort_values("valor", ascending=False)
         with st.expander("Detalhe por subfunção"):
             st.dataframe(s, width="stretch", hide_index=True,
