@@ -40,9 +40,27 @@ def _norm(txt: str) -> str:
     return re.sub(r"\s+", " ", txt)
 
 
+def normalizar_unidade(unidade) -> str:
+    """Unifica nomes de unidade que variam no PNCP (ex.: "FME" e "FUNDO MUNICIPAL DE EDUCACAO - FME")."""
+    u = _norm(unidade).upper()
+    if not u or u == "NAN":
+        return "Não informada"
+    if "FUNDEB" in u or "FME" in u or "EDUCACAO" in u:
+        return "FME"
+    if "FMS" in u or "SAUDE" in u:
+        return "FMS"
+    if "FMAS" in u or "ASSISTENCIA" in u:
+        return "FMAS"
+    if "FMMA" in u or "AMBIENTE" in u:
+        return "FMMA"
+    if "UNIDADE UNICA" in u or "MUNICIPIO" in u:
+        return "Prefeitura (unidade geral)"
+    return str(unidade)
+
+
 def area_pncp(unidade, objeto) -> str:
     """Área aproximada de uma contratação do PNCP: pela unidade (fundos municipais) ou por palavras do objeto."""
-    u = str(unidade or "").strip().upper()
+    u = normalizar_unidade(unidade)
     if u in UNIDADE_AREA:
         return UNIDADE_AREA[u]
     o = _norm(objeto)

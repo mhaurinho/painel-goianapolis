@@ -1,7 +1,17 @@
 """Goianápolis em Números: painel público de dados municipais (Streamlit + Plotly)."""
+import importlib
+import sys
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+
+# No Streamlit Cloud, um redeploy pode reexecutar app.py sem recarregar os módulos locais já importados;
+# aí a importação de uma função nova falha (ImportError). Recarregamos os módulos do projeto a cada execução.
+for _mod in ("ui", "dados_siconfi", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
+             "pagina_fornecedores", "pagina_projecao", "pagina_capilaridade", "pagina_denuncia"):
+    if _mod in sys.modules:
+        importlib.reload(sys.modules[_mod])
 
 from ui import CSS, brl, brl_curto, cabecalho, faltando, grafico, kpis, ler, num, pct
 
@@ -10,13 +20,7 @@ POP_CENSO = 13967  # Censo 2022 (IBGE)
 st.set_page_config(page_title="Goianápolis em Números", page_icon="📊", layout="wide")
 st.markdown(CSS, unsafe_allow_html=True)
 
-AREAS = {
-    "Saúde": ["Saúde"], "Educação": ["Educação"], "Assistência social": ["Assistência Social"],
-    "Segurança": ["Segurança Pública"], "Meio ambiente": ["Gestão Ambiental"],
-    "Infraestrutura/urbanismo": ["Urbanismo", "Saneamento"], "Cultura": ["Cultura"],
-    "Esporte e lazer": ["Desporto e Lazer"], "Mobilidade/transporte": ["Transporte"],
-    "Administração": ["Administração"], "Agricultura": ["Agricultura"],
-}
+from dados_siconfi import AREAS, FUNCOES  # noqa: E402
 
 
 # ---------------------------------------------------------------- preparação de dados
@@ -24,14 +28,6 @@ def rreo_final(df: pd.DataFrame) -> pd.DataFrame:
     """Último bimestre disponível de cada ano (valores acumulados no ano)."""
     ult = df.groupby("exercicio")["periodo"].transform("max")
     return df[df["periodo"] == ult]
-
-
-# As 28 funções de governo (Portaria MOG 42/1999); as demais linhas do Anexo 02 são subfunções.
-FUNCOES = ["Legislativa", "Judiciária", "Essencial à Justiça", "Administração", "Defesa Nacional",
-           "Segurança Pública", "Relações Exteriores", "Assistência Social", "Previdência Social", "Saúde",
-           "Trabalho", "Educação", "Cultura", "Direitos da Cidadania", "Urbanismo", "Habitação", "Saneamento",
-           "Gestão Ambiental", "Ciência e Tecnologia", "Agricultura", "Organização Agrária", "Indústria",
-           "Comércio e Serviços", "Comunicações", "Energia", "Transporte", "Desporto e Lazer", "Encargos Especiais"]
 
 
 @st.cache_data
@@ -347,8 +343,8 @@ def pg_compras():
     df = ler("pncp_contratacoes.csv")
     if df is None:
         return faltando("pncp_contratacoes.csv", "coleta/pncp.py")
-    # Filtro feito aqui mesmo (sem importar de analises.py): no Streamlit Cloud, após um redeploy "a quente",
-    # módulos já importados podem ficar em cache na versão antiga e a importação de um nome novo falha.
+    from analises import normalizar_unidade
+    df = df.assign(unidadeOrgao=df["unidadeOrgao"].map(normalizar_unidade)) if "unidadeOrgao" in df else df
     incluir = st.toggle("Incluir revogadas/anuladas/suspensas", value=False)
     f = df[df["ano"] == ANO]
     n_publicadas = len(f)
