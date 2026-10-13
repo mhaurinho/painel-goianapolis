@@ -12,3 +12,16 @@
 - INEP, Censo Escolar: https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/censo-escolar
 - DATASUS TabNet: http://tabnet.datasus.gov.br
 - Portal da Transparência de Goiás (dados do estado): https://transparencia.go.gov.br
+
+## Fontes adicionadas (verificadas em 13/10/2026)
+- SICONFI DCA Anexo I-C (IPTU, ISS, ITBI, anual): https://apidatalake.tesouro.gov.br/ords/siconfi/tt/dca?an_exercicio=2024&no_anexo=DCA-Anexo%20I-C&id_ente=5208400
+- SICONFI RGF Anexo 01 (pessoal × LRF, quadrimestral): https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rgf?an_exercicio=2025&in_periodicidade=Q&nr_periodo=3&co_tipo_demonstrativo=RGF&no_anexo=RGF-Anexo%2001&co_esfera=M&co_poder=E&id_ente=5208400
+- PNCP contratos (fornecedores): https://pncp.gov.br/api/consulta/v1/contratos?dataInicial=20250101&dataFinal=20251231&cnpjOrgao=02506012000118&pagina=1
+- IBGE população estimada (agregado 6579): https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/2024|2025/variaveis/9324?localidades=N6[5208400]
+- Transferegov, transferências especiais: https://api.transferegov.gestao.gov.br/transferenciasespeciais/plano_acao_especial?cnpj_beneficiario_plano_acao=eq.02506012000118
+
+## Testadas sem sucesso
+- INEP/IDEB (download.inep.gov.br): sem resposta.
+- API do Portal da Transparência federal: exige chave (HTTP 401).
+- RREO Anexos 08 (MDE/Fundeb) e 12 (saúde): não disponíveis na API do SICONFI para o município.
+- DATASUS, FNS e FNDE: sem API municipal simples verificada.

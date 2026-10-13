@@ -1,5 +1,6 @@
 """Coleta RREO (Anexos 01 e 02) do SICONFI para Goianápolis (IBGE 5208400)."""
 import time
+from datetime import date
 from pathlib import Path
 import pandas as pd
 import requests
@@ -7,7 +8,7 @@ import requests
 ID_ENTE = 5208400
 URL = "https://apidatalake.tesouro.gov.br/ords/siconfi/tt/rreo"
 DADOS = Path(__file__).resolve().parent.parent / "dados"
-ANOS = range(2020, 2026)
+ANOS = range(2020, date.today().year + 1)
 
 
 def baixar(anexo: str) -> pd.DataFrame:
