@@ -196,6 +196,7 @@ def pg_visao():
           ("Receita per capita", brl(rec / pop) if rec else "n/d")])
     if per < 6:
         st.caption(f"{ANO}: dados acumulados até o {per}º bimestre.")
+    banner_alertas()
     c1, c2 = st.columns([3, 2])
     with c1:
         dpf = despesa_por_funcao()
@@ -472,6 +473,66 @@ def pg_sobre():
 """)
 
 
+def _tabela_alertas(t, col_nome, rotulo):
+    cfg = {"atual": st.column_config.NumberColumn("Atual (R$)", format="localized"),
+           "media_historica": st.column_config.NumberColumn("Média histórica (R$)", format="localized"),
+           "variacao_pct": st.column_config.NumberColumn("Variação (%)", format="%.1f"),
+           col_nome: st.column_config.TextColumn(rotulo), "nivel": st.column_config.TextColumn("Nível")}
+    cols = [col_nome, "atual", "media_historica", "variacao_pct", "nivel"]
+    st.dataframe(t[cols], width="stretch", hide_index=True, column_config=cfg)
+
+
+def calcular_alertas(ano):
+    from alertas import alertas_pncp, alertas_siconfi
+    a2, c = ler("siconfi_rreo_anexo02.csv"), ler("pncp_contratacoes.csv")
+    sic, per = alertas_siconfi(a2, ano) if a2 is not None else (pd.DataFrame(), None)
+    pn, desc = alertas_pncp(c, ano) if c is not None else (pd.DataFrame(), None)
+    return sic, per, pn, desc
+
+
+def banner_alertas():
+    sic, per, pn, _ = calcular_alertas(ANO)
+    n = lambda t, cor: int(t["nivel"].str.contains(cor).sum()) if not t.empty else 0  # noqa: E731
+    sic_areas = sic[sic["area"] != "TOTAL (referência)"] if not sic.empty else sic
+    vermelho, amarelo = n(sic_areas, "vermelho") + n(pn, "vermelho"), n(sic_areas, "amarelo") + n(pn, "amarelo")
+    if vermelho or amarelo:
+        msg = (f"**Alertas de gasto em {ANO}:** {vermelho} 🔴 e {amarelo} 🟡 (áreas e unidades com gasto acima da "
+               "média histórica do mesmo período). Veja a página **Alertas**.")
+        (st.error if vermelho else st.warning)(msg)
+
+
+def pg_alertas():
+    from alertas import ANOS_HISTORICO, LIMIAR_AMARELO, LIMIAR_VERMELHO
+    cabecalho("Alertas automáticos de gasto",
+              f"Compara o gasto acumulado do período atual com a **média do mesmo período nos {ANOS_HISTORICO} anos "
+              f"anteriores**. 🟡 acima de {LIMIAR_AMARELO:.0f}% · 🔴 acima de {LIMIAR_VERMELHO:.0f}%.",
+              "SICONFI (RREO Anexo 02, liquidado acumulado por bimestre) e PNCP (homologado por unidade).")
+    st.info("São **sinais para acompanhamento**, não irregularidades. Os valores são **nominais** (sem correção "
+            "pela inflação) e o orçamento do município cresceu bastante no período; compare cada área com a linha "
+            "**TOTAL (referência)**. No PNCP, o histórico é curto (a partir de 2023) e o valor homologado entra na "
+            "data de publicação, não na execução.")
+    sic, per, pn, desc = calcular_alertas(ANO)
+    st.subheader("Áreas (função de governo), SICONFI")
+    if sic.empty:
+        st.info(f"Sem RREO de {ANO}.")
+    else:
+        st.caption(sic["comparacao"].iloc[0])
+        _tabela_alertas(sic, "area", "Área")
+        g = sic.dropna(subset=["variacao_pct"])
+        fig = px.bar(g.sort_values("variacao_pct"), x="variacao_pct", y="area", orientation="h", color="nivel",
+                     color_discrete_map={"🔴 vermelho": "#C0504D", "🟡 amarelo": "#E0A526", "🟢 normal": "#1B6F4A"},
+                     title="Variação sobre a média histórica (%)", labels={"variacao_pct": "%", "area": "", "nivel": ""})
+        fig.add_vline(x=LIMIAR_AMARELO, line_dash="dot", line_color="#E0A526")
+        fig.add_vline(x=LIMIAR_VERMELHO, line_dash="dot", line_color="#C0504D")
+        grafico(fig, None)
+    st.subheader("Unidades do PNCP (valor homologado)")
+    if pn.empty:
+        st.info(f"Sem contratações publicadas no PNCP em {ANO}.")
+    else:
+        st.caption(desc)
+        _tabela_alertas(pn, "unidadeOrgao", "Unidade")
+
+
 def pg_auditoria():
     from pagina_auditoria import pagina
     pagina(ANO, despesa_por_funcao)
@@ -484,7 +545,7 @@ def pg_conciliacao():
 
 PAGINAS = {"Visão geral": pg_visao, "Despesas": pg_despesas, "Receitas e tributos": pg_receitas,
            "Pessoal (LRF)": pg_pessoal, "Transferências": pg_transferencias, "Compras": pg_compras,
-           "Saúde": pg_saude, "Educação": pg_educacao, "Demais áreas": pg_demais, "Auditoria": pg_auditoria, "Conciliação": pg_conciliacao, "Sobre os dados": pg_sobre}
+           "Saúde": pg_saude, "Educação": pg_educacao, "Demais áreas": pg_demais, "Alertas": pg_alertas, "Auditoria": pg_auditoria, "Conciliação": pg_conciliacao, "Sobre os dados": pg_sobre}
 escolha = st.sidebar.radio("Páginas", list(PAGINAS))
 
 
