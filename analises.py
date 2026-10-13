@@ -9,6 +9,9 @@ import pandas as pd
 
 # Limite de dispensa por valor (Lei 14.133/2021, art. 75, II), por ano de vigência.
 # 2024: Decreto 11.871/2023 · 2025: Decreto 12.343/2024 · 2026: Decreto 12.807/2025 (planalto.gov.br)
+RAZAO_HOMOLOGADO_MINIMA = 0.01  # homologado < 1% do estimado: provável erro de digitação ou unidade
+VALOR_CONTRATO_MINIMO = 100.0  # contratos abaixo de R$ 100 (ex.: tarifas bancárias) são sinalizados
+IQR_FATOR = 1.5
 LIMITE_DISPENSA = {2024: 59906.02, 2025: 62725.59, 2026: 65492.11}
 # 2023: valor do Decreto 11.317/2022 não verificado; usamos o de 2024 como referência conservadora
 # (é maior que o de 2023, então só sinaliza grupos que superariam também o limite do ano seguinte).
@@ -94,7 +97,7 @@ def outliers_iqr(df: pd.DataFrame) -> pd.DataFrame:
     if len(base) >= 8:
         q1, q3 = base.quantile([0.25, 0.75])
         iqr = q3 - q1
-        lo, hi = q1 - 1.5 * iqr, min(q3 + 1.5 * iqr, 1.0)
+        lo, hi = q1 - IQR_FATOR * iqr, min(q3 + IQR_FATOR * iqr, 1.0)
     else:
         lo, hi = 0.5, 1.0
     out = x[(x["razao"] < lo) | (x["razao"] > hi + 1e-6)].copy()
@@ -160,10 +163,10 @@ def qualidade_pncp(c: pd.DataFrame, k: pd.DataFrame | None = None) -> dict:
         "duplicidades": int(c.duplicated(["ano", "objeto", "valorEstimado"]).sum()),
         "razao_menor_1pct": int(((pd.to_numeric(c["valorHomologado"], errors="coerce") > 0)
                                  & (pd.to_numeric(c["valorHomologado"], errors="coerce")
-                                    < 0.01 * pd.to_numeric(c["valorEstimado"], errors="coerce"))).sum()),
+                                    < RAZAO_HOMOLOGADO_MINIMA * pd.to_numeric(c["valorEstimado"], errors="coerce"))).sum()),
     }
     if k is not None:
         out["contratos"] = len(k)
         out["contratos_sem_compra"] = int((~k["numeroControlePncpCompra"].isin(c["numeroControlePNCP"])).sum())
-        out["contratos_abaixo_100"] = int((pd.to_numeric(k["valorGlobal"], errors="coerce") < 100).sum())
+        out["contratos_abaixo_100"] = int((pd.to_numeric(k["valorGlobal"], errors="coerce") < VALOR_CONTRATO_MINIMO).sum())
     return out

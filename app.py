@@ -472,13 +472,36 @@ def pg_sobre():
 - {num(q.get('contratos_abaixo_100', 0))} contratos com valor global abaixo de R$ 100 (por exemplo, tarifas bancárias).
 """)
 
+    from alertas import ANOS_HISTORICO, LIMIAR_AMARELO, LIMIAR_VERMELHO, MIN_PUBLICACOES_ANO
+    from analises import IQR_FATOR, LIMITE_DISPENSA, LIMITE_REFERENCIA_2023, RAZAO_HOMOLOGADO_MINIMA, VALOR_CONTRATO_MINIMO
+    from pagina_fornecedores import HHI_ELEVADO, PARTICIPACAO_ELEVADA
+    from pagina_projecao import ANOS_SAZONALIDADE
+    lim = "; ".join(f"{a}: {brl(v)}" for a, v in sorted(LIMITE_DISPENSA.items()))
+    st.markdown(f"""
+### Limiares fixos usados nas análises
+São escolhas de método do painel (não são regras legais, exceto o limite de dispensa). Mudá-los muda os sinais exibidos.
+
+| Onde | Limiar | Por quê |
+|---|---|---|
+| Alertas | 🟡 acima de {LIMIAR_AMARELO:.0f}% e 🔴 acima de {LIMIAR_VERMELHO:.0f}% sobre a média do mesmo período nos {ANOS_HISTORICO} anos anteriores | Critério pedido para o painel; valores nominais |
+| Alertas (PNCP) | ano com menos de {MIN_PUBLICACOES_ANO} contratações no mesmo intervalo fica fora da média | A adoção do PNCP pelo município foi irregular (2 publicações em 2024) |
+| Fornecedores | HHI acima de {num(HHI_ELEVADO)} ou um fornecedor com mais de {PARTICIPACAO_ELEVADA:.0f}% → "concentração elevada — ponto de atenção" | 2.500 é a referência usual de mercado muito concentrado (escala 0–10.000) |
+| Auditoria (homologado × estimado) | fora de Q1 − {num(IQR_FATOR, 1)}·IQR a Q3 + {num(IQR_FATOR, 1)}·IQR (teto 1) | Regra usual de valores atípicos |
+| Qualidade do PNCP | homologado menor que {pct(100 * RAZAO_HOMOLOGADO_MINIMA, 0)} do estimado | Provável erro de digitação ou de unidade |
+| Qualidade do PNCP | contrato com valor global abaixo de {brl(VALOR_CONTRATO_MINIMO)} | Ex.: tarifas bancárias registradas como contrato |
+| Possível fracionamento | limite de dispensa do art. 75, II, da Lei 14.133/2021 ({lim}; até 2023 usa {brl(LIMITE_REFERENCIA_2023)} como referência; depois de 2026, o maior valor conhecido) | Valores dos decretos de atualização |
+| Projeção | sazonalidade = média dos {ANOS_SAZONALIDADE} anos anteriores completos | Histórico do SICONFI desde 2020 |
+""")
 
 def _tabela_alertas(t, col_nome, rotulo):
     cfg = {"atual": st.column_config.NumberColumn("Atual (R$)", format="localized"),
            "media_historica": st.column_config.NumberColumn("Média histórica (R$)", format="localized"),
            "variacao_pct": st.column_config.NumberColumn("Variação (%)", format="%.1f"),
+           "acima_do_total_pp": st.column_config.NumberColumn(
+               "Variação descontado o crescimento do TOTAL (%)", format="%.1f",
+               help="(1 + variação da área) ÷ (1 + variação do TOTAL) − 1. Positivo: a área cresceu mais que o orçamento."),
            col_nome: st.column_config.TextColumn(rotulo), "nivel": st.column_config.TextColumn("Nível")}
-    cols = [col_nome, "atual", "media_historica", "variacao_pct", "nivel"]
+    cols = [col_nome, "atual", "media_historica", "variacao_pct"] + (["acima_do_total_pp"] if "acima_do_total_pp" in t else []) + ["nivel"]
     st.dataframe(t[cols], width="stretch", hide_index=True, column_config=cfg)
 
 
@@ -509,7 +532,7 @@ def pg_alertas():
               "SICONFI (RREO Anexo 02, liquidado acumulado por bimestre) e PNCP (homologado por unidade).")
     st.info("São **sinais para acompanhamento**, não irregularidades. Os valores são **nominais** (sem correção "
             "pela inflação) e o orçamento do município cresceu bastante no período; compare cada área com a linha "
-            "**TOTAL (referência)**. No PNCP, o histórico é curto (a partir de 2023) e o valor homologado entra na "
+            "**TOTAL (referência)** e a coluna *descontado o crescimento do TOTAL*. No PNCP, o histórico é curto (a partir de 2023) e o valor homologado entra na "
             "data de publicação, não na execução.")
     sic, per, pn, desc = calcular_alertas(ANO)
     st.subheader("Áreas (função de governo), SICONFI")
