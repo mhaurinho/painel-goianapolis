@@ -3,9 +3,10 @@ from pathlib import Path
 import pandas as pd
 import requests
 
+from municipio import CNPJ, IBGE  # noqa: F401
+
 DADOS = Path(__file__).resolve().parent.parent / "dados"
 URL = "https://api.transferegov.gestao.gov.br/transferenciasespeciais/plano_acao_especial"
-CNPJ = "02506012000118"
 
 
 def main():

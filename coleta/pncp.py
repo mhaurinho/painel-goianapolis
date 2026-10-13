@@ -5,7 +5,8 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-IBGE = "5208400"
+from municipio import CNPJ, IBGE  # noqa: F401
+
 URL = "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao"
 DADOS = Path(__file__).resolve().parent.parent / "dados"
 MODALIDADES = range(1, 14)  # códigos de modalidade do PNCP
@@ -65,7 +66,6 @@ def baixar_ano(ano: int) -> list:
 
 
 URL_CONTRATOS = "https://pncp.gov.br/api/consulta/v1/contratos"
-CNPJ = "02506012000118"
 
 
 def baixar_contratos(ano: int) -> list:
