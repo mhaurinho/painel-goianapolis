@@ -113,3 +113,39 @@ def concentracao_fornecedores(contratos: pd.DataFrame) -> pd.DataFrame:
 def hhi(participacoes_pct: pd.Series) -> float:
     """Índice Herfindahl-Hirschman (0–10.000)."""
     return float((participacoes_pct ** 2).sum())
+
+
+SITUACOES_INVALIDAS = ("Revogada", "Anulada", "Suspensa")
+
+
+def contratacoes_validas(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove contratações revogadas, anuladas ou suspensas (não devem entrar em somas de valor)."""
+    if "situacao" not in df:
+        return df
+    return df[~df["situacao"].astype(str).isin(SITUACOES_INVALIDAS)]
+
+
+def possiveis_duplicidades(df: pd.DataFrame) -> pd.DataFrame:
+    """Contratações distintas no PNCP com mesmo ano, objeto e valor estimado (possível publicação em duplicidade)."""
+    chave = ["ano", "objeto", "valorEstimado"]
+    d = df[df.duplicated(chave, keep=False)].sort_values(chave)
+    return d
+
+
+def qualidade_pncp(c: pd.DataFrame, k: pd.DataFrame | None = None) -> dict:
+    pub = pd.to_datetime(c.get("dataPublicacao"), errors="coerce").dt.year
+    out = {
+        "contratacoes": len(c),
+        "invalidas": int(c["situacao"].astype(str).isin(SITUACOES_INVALIDAS).sum()) if "situacao" in c else 0,
+        "sem_homologado": int((pd.to_numeric(c["valorHomologado"], errors="coerce").fillna(0) == 0).sum()),
+        "ano_diferente_publicacao": int((pub.notna() & (pub != c["ano"])).sum()),
+        "duplicidades": int(c.duplicated(["ano", "objeto", "valorEstimado"]).sum()),
+        "razao_menor_1pct": int(((pd.to_numeric(c["valorHomologado"], errors="coerce") > 0)
+                                 & (pd.to_numeric(c["valorHomologado"], errors="coerce")
+                                    < 0.01 * pd.to_numeric(c["valorEstimado"], errors="coerce"))).sum()),
+    }
+    if k is not None:
+        out["contratos"] = len(k)
+        out["contratos_sem_compra"] = int((~k["numeroControlePncpCompra"].isin(c["numeroControlePNCP"])).sum())
+        out["contratos_abaixo_100"] = int((pd.to_numeric(k["valorGlobal"], errors="coerce") < 100).sum())
+    return out

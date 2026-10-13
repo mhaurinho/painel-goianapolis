@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import streamlit as st
 
-from analises import area_pncp
+from analises import area_pncp, contratacoes_validas
 from ui import brl, brl_curto, cabecalho, faltando, grafico, kpis, ler, pct
 
 AVISO = """
@@ -113,7 +113,7 @@ def pagina(ANO: int, despesa_por_funcao):
     c = ler("pncp_contratacoes.csv")
     if d is None or c is None:
         return faltando("pncp_contratacoes.csv", "coleta/pncp.py")
-    c = c.copy()
+    c = contratacoes_validas(c).copy()
     c["valorHomologado"] = pd.to_numeric(c["valorHomologado"], errors="coerce").fillna(0)
     c["area"] = [area_pncp(u, o) for u, o in zip(c.get("unidadeOrgao", [None] * len(c)), c["objeto"])]
     anos = sorted(a for a in set(c["ano"].dropna().astype(int)) & set(e["exercicio"]) if a >= 2023)

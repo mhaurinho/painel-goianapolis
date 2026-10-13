@@ -329,7 +329,11 @@ def pg_compras():
     df = ler("pncp_contratacoes.csv")
     if df is None:
         return faltando("pncp_contratacoes.csv", "coleta/pncp.py")
+    from analises import contratacoes_validas
+    incluir = st.toggle("Incluir revogadas/anuladas/suspensas", value=False)
     f = df[df["ano"] == ANO]
+    if not incluir:
+        f = contratacoes_validas(f)
     if "unidadeOrgao" in f:
         unidades = st.sidebar.multiselect("Unidade/órgão (PNCP)", sorted(df["unidadeOrgao"].dropna().unique()))
         if unidades:
@@ -424,6 +428,30 @@ def pg_sobre():
 - "Área" é a **função de governo** do SICONFI, uma aproximação da secretaria, não o organograma.
 - O PNCP só cobre bem as compras a partir de 2023; anos anteriores aparecem incompletos.
 - Per capita usa a estimativa do IBGE do ano (ou o Censo 2022 / o ano anterior mais próximo).
+""")
+    st.subheader("Qualidade dos dados (conferências automáticas)")
+    from analises import qualidade_pncp
+    tot = total_rreo2()
+    dpf = despesa_por_funcao()
+    if tot is not None and dpf is not None:
+        conf = dpf.groupby("exercicio")["valor"].sum().to_frame("soma_funcoes").join(tot.rename("total_rreo"))
+        conf["diferenca"] = conf["soma_funcoes"] - conf["total_rreo"]
+        st.markdown("**RREO Anexo 02:** soma das funções × total de despesa liquidada (deve ser zero).")
+        st.dataframe(conf.reset_index(), width="stretch", hide_index=True,
+                     column_config={c: st.column_config.NumberColumn(format="localized")
+                                    for c in ("soma_funcoes", "total_rreo", "diferenca")})
+    c, k = ler("pncp_contratacoes.csv"), ler("pncp_contratos.csv")
+    if c is not None:
+        q = qualidade_pncp(c, k)
+        st.markdown(f"""
+**PNCP** ({num(q['contratacoes'])} contratações, {num(q.get('contratos', 0))} contratos):
+- {num(q['invalidas'])} contratações revogadas, anuladas ou suspensas, **excluídas das somas** por padrão;
+- {num(q['sem_homologado'])} sem valor homologado (R$ 0), em geral ainda não concluídas;
+- {num(q['ano_diferente_publicacao'])} com ano da compra diferente do ano de publicação no PNCP (o painel usa o ano da compra);
+- {num(q['duplicidades'])} com mesmo ano, objeto e valor estimado de outra contratação (possível duplicidade; veja a Auditoria);
+- {num(q['razao_menor_1pct'])} com homologado menor que 1% do estimado (provável erro de digitação ou unidade);
+- {num(q.get('contratos_sem_compra', 0))} contrato(s) sem a contratação correspondente no arquivo;
+- {num(q.get('contratos_abaixo_100', 0))} contratos com valor global abaixo de R$ 100 (por exemplo, tarifas bancárias).
 """)
 
 

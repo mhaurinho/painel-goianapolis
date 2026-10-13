@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from analises import (area_pncp, concentracao_fornecedores, hhi, limite_dispensa, outliers_iqr,
+from analises import (area_pncp, contratacoes_validas, possiveis_duplicidades, concentracao_fornecedores, hhi, limite_dispensa, outliers_iqr,
                       possivel_fracionamento)
 from ui import brl, brl_curto, cabecalho, faltando, grafico, kpis, ler, num, pct
 
@@ -36,7 +36,10 @@ def pagina(ANO: int, despesa_por_funcao):
     c = ler("pncp_contratacoes.csv")
     if c is None:
         return faltando("pncp_contratacoes.csv", "coleta/pncp.py")
-    c = preparar(c)
+    n_total = len(c)
+    c = preparar(contratacoes_validas(c))
+    if len(c) < n_total:
+        st.caption(f"{num(n_total - len(c))} contratações revogadas, anuladas ou suspensas foram excluídas da análise.")
     todos = st.toggle("Considerar todos os anos do PNCP (ignorar o filtro de ano)", value=False)
     f = c if todos else c[c["ano"] == ANO]
     rotulo = "todos os anos" if todos else str(ANO)
@@ -70,6 +73,24 @@ def pagina(ANO: int, despesa_por_funcao):
                      column_config={"valorEstimado": st.column_config.NumberColumn("Estimado (R$)", format="localized"),
                                     "valorHomologado": st.column_config.NumberColumn("Homologado (R$)", format="localized"),
                                     "razao": st.column_config.NumberColumn("Razão", format="%.2f")})
+
+    erros = out[out["razao"] < 0.01] if not out.empty else out
+    if not erros.empty:
+        st.markdown(f"Dessas, **{num(len(erros))}** têm homologado menor que 1% do estimado (por exemplo, "
+                    f"{brl(erros.iloc[0]['valorEstimado'])} estimado e {brl(erros.iloc[0]['valorHomologado'])} "
+                    "homologado): mais provável **erro de digitação/unidade** no PNCP do que desconto real.")
+
+    st.subheader("2b. Possíveis publicações em duplicidade")
+    dup = possiveis_duplicidades(f)
+    if dup.empty:
+        st.success("Nenhuma no recorte.")
+    else:
+        st.markdown(f"{num(len(dup))} contratações com mesmo ano, objeto e valor estimado. Podem ser lotes "
+                    "distintos ou publicação repetida; confira pelo número de controle.")
+        st.dataframe(dup[["numeroControlePNCP", "ano", "modalidade", "objeto", "valorEstimado", "valorHomologado"]],
+                     width="stretch", hide_index=True,
+                     column_config={"valorEstimado": st.column_config.NumberColumn("Estimado (R$)", format="localized"),
+                                    "valorHomologado": st.column_config.NumberColumn("Homologado (R$)", format="localized")})
 
     # 3. fornecedores
     st.subheader("3. Concentração de fornecedores (contratos no PNCP)")
