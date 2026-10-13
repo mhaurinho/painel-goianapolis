@@ -10,6 +10,9 @@ from dados_siconfi import funcoes_por_periodo, total_por_periodo
 LIMIAR_AMARELO = 20.0  # % acima da média histórica
 LIMIAR_VERMELHO = 50.0
 ANOS_HISTORICO = 3
+# PNCP: um ano só entra na média se tiver ao menos esta quantidade de contratações válidas publicadas no mesmo
+# intervalo (a adoção do PNCP pelo município foi irregular: 2 publicações em 2024, por exemplo).
+MIN_PUBLICACOES_ANO = 10
 
 
 def nivel(var_pct) -> str:
@@ -38,6 +41,9 @@ def alertas_siconfi(a2: pd.DataFrame, ano: int) -> tuple[pd.DataFrame, int | Non
     out = pd.DataFrame({"atual": atual, "media_historica": hist}).dropna(subset=["atual"])
     out["variacao_pct"] = 100 * (out["atual"] / out["media_historica"] - 1)
     out["nivel"] = out["variacao_pct"].map(nivel)
+    # crescimento acima do orçamento total: compara a variação da área com a do TOTAL (anula inflação e expansão geral)
+    var_total = out.loc["TOTAL (referência)", "variacao_pct"] if "TOTAL (referência)" in out.index else float("nan")
+    out["acima_do_total_pp"] = 100 * ((1 + out["variacao_pct"] / 100) / (1 + var_total / 100) - 1)
     out["comparacao"] = f"{p}º bimestre de {ano} × média do {p}º bimestre de " + ", ".join(map(str, anteriores))
     return out.reset_index().rename(columns={"index": "area"}).sort_values("variacao_pct", ascending=False), p
 
@@ -59,7 +65,10 @@ def alertas_pncp(c: pd.DataFrame, ano: int) -> tuple[pd.DataFrame, str | None]:
     doy = corte.dayofyear
     janela = c[c["pub"].dt.dayofyear <= doy]
     g = janela.groupby(["ano_pub", "unidadeOrgao"], as_index=False)["valorHomologado"].sum()
-    anteriores = [a for a in sorted(g["ano_pub"].unique()) if ano - ANOS_HISTORICO <= a < ano]
+    n_pub = janela.groupby("ano_pub").size()
+    anteriores = [a for a in sorted(g["ano_pub"].unique()) if ano - ANOS_HISTORICO <= a < ano
+                  and n_pub.get(a, 0) >= MIN_PUBLICACOES_ANO]
+    excluidos = [a for a in range(ano - ANOS_HISTORICO, ano) if a not in anteriores and n_pub.get(a, 0) > 0]
     at = g[g["ano_pub"] == ano].set_index("unidadeOrgao")["valorHomologado"]
     # anos sem nenhuma publicação da unidade contam como zero na média
     piv = g[g["ano_pub"].isin(anteriores)].pivot(index="unidadeOrgao", columns="ano_pub", values="valorHomologado")
@@ -70,4 +79,7 @@ def alertas_pncp(c: pd.DataFrame, ano: int) -> tuple[pd.DataFrame, str | None]:
     out["variacao_pct"] = 100 * (out["atual"] / out["media_historica"].where(out["media_historica"] > 0) - 1)
     out["nivel"] = out["variacao_pct"].map(nivel)
     desc = f"01/01 a {corte:%d/%m} de {ano} × média do mesmo intervalo em " + (", ".join(map(str, anteriores)) or "nenhum ano")
+    if excluidos:
+        desc += (f" (fora da média por terem menos de {MIN_PUBLICACOES_ANO} publicações no intervalo: "
+                 + ", ".join(f"{a} ({n_pub[a]})" for a in excluidos) + ")")
     return out.reset_index().rename(columns={"index": "unidadeOrgao"}).sort_values("variacao_pct", ascending=False), desc
