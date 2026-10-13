@@ -28,7 +28,7 @@ def _tabela(a2: pd.DataFrame, ano: int):
     for a in anteriores:
         x = L[L["exercicio"] == a].pivot_table(index="area", columns="periodo", values="valor", aggfunc="sum")
         if p in x and 6 in x:
-            fr.append((x[p] / x[6]).rename(a))
+            fr.append((x[p] / x[6].where(x[6] > 0)).rename(a))
     frac = pd.concat(fr, axis=1).mean(axis=1) if fr else pd.Series(dtype=float)
     out = pd.DataFrame({"liquidado_ate_bimestre": atual, "dotacao_atualizada": dotacao})
     out["projecao_linear"] = out["liquidado_ate_bimestre"] / p * 6
@@ -46,6 +46,28 @@ def _tabela(a2: pd.DataFrame, ano: int):
     out["situacao"] = out.apply(alerta, axis=1)
     out = out.reset_index().rename(columns={"index": "area"})
     return out.sort_values("liquidado_ate_bimestre", ascending=False), p, anteriores
+
+
+@st.cache_data(show_spinner=False)
+def backtest(a2: pd.DataFrame, p: int) -> pd.DataFrame:
+    """Para cada ano completo com histórico, projeta o total a partir do bimestre p (usando só anos anteriores)
+    e compara com o liquidado real no 6º bimestre."""
+    real = total_por_periodo(a2)
+    real = real[real["periodo"] == 6].set_index("exercicio")["valor"]
+    linhas = []
+    for ano in sorted(real.index):
+        if not any(ano - ANOS_SAZONALIDADE <= a < ano for a in real.index):
+            continue
+        sub = a2[~((a2["exercicio"] == ano) & (a2["periodo"] > p))]
+        t, _, ant = _tabela(sub, ano)
+        tot = t[t["area"] == "TOTAL"].iloc[0]
+        linhas.append({"Ano testado": str(ano), "Histórico usado": ", ".join(map(str, ant)),
+                       "Liquidado real (6º bim.)": real[ano],
+                       "Projeção linear": tot["projecao_linear"],
+                       "Erro linear (%)": 100 * (tot["projecao_linear"] / real[ano] - 1),
+                       "Projeção sazonal": tot["projecao_sazonal"],
+                       "Erro sazonal (%)": 100 * (tot["projecao_sazonal"] / real[ano] - 1)})
+    return pd.DataFrame(linhas)
 
 
 def pagina(ANO: int):
@@ -93,6 +115,19 @@ def pagina(ANO: int):
                 "excesso_linear_pct": st.column_config.NumberColumn("Linear vs dotação (%)", format="%.1f"),
                 "excesso_sazonal_pct": st.column_config.NumberColumn("Sazonal vs dotação (%)", format="%.1f")})
     st.dataframe(t, width="stretch", hide_index=True, column_config=cfg)
+    if p < 6:
+        bt = backtest(a2, p)
+        bt = bt[bt["Histórico usado"] != ""]
+        if not bt.empty:
+            st.subheader(f"Teste com anos passados (projeção feita no {p}º bimestre)")
+            st.markdown(f"Para cada ano já encerrado, refizemos a projeção usando só os dados até o {p}º bimestre e os "
+                        "anos anteriores a ele, e comparamos com o liquidado real em dezembro. Erro médio absoluto: "
+                        f"**linear {pct(bt['Erro linear (%)'].abs().mean())}**, "
+                        f"**sazonal {pct(bt['Erro sazonal (%)'].abs().mean())}**.")
+            st.dataframe(bt, width="stretch", hide_index=True, column_config={
+                c: st.column_config.NumberColumn(format="localized") for c in
+                ("Liquidado real (6º bim.)", "Projeção linear", "Projeção sazonal")} | {
+                c: st.column_config.NumberColumn(format="%.1f") for c in ("Erro linear (%)", "Erro sazonal (%)")})
     st.caption("**Limitações:** a despesa não é linear (13º salário, obras e empenhos concentrados no fim do ano); a "
                "sazonalidade usa só os anos anteriores disponíveis e pode mudar com novos programas; a dotação pode "
                "ser ampliada por créditos adicionais ao longo do ano; áreas sem histórico usam a fração do total. "
