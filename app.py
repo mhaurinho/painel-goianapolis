@@ -543,6 +543,11 @@ def pg_projecao():
     pagina(ANO)
 
 
+def pg_capilaridade():
+    from pagina_capilaridade import pagina
+    pagina(ANO)
+
+
 def pg_auditoria():
     from pagina_auditoria import pagina
     pagina(ANO, despesa_por_funcao)
@@ -554,7 +559,7 @@ def pg_conciliacao():
 
 
 PAGINAS = {"Visão geral": pg_visao, "Despesas": pg_despesas, "Receitas e tributos": pg_receitas,
-           "Pessoal (LRF)": pg_pessoal, "Projeção": pg_projecao, "Transferências": pg_transferencias, "Compras": pg_compras, "Fornecedores": pg_fornecedores,
+           "Pessoal (LRF)": pg_pessoal, "Projeção": pg_projecao, "Transferências": pg_transferencias, "Compras": pg_compras, "Fornecedores": pg_fornecedores, "Capilaridade": pg_capilaridade,
            "Saúde": pg_saude, "Educação": pg_educacao, "Demais áreas": pg_demais, "Alertas": pg_alertas, "Auditoria": pg_auditoria, "Conciliação": pg_conciliacao, "Sobre os dados": pg_sobre}
 escolha = st.sidebar.radio("Páginas", list(PAGINAS))
 
