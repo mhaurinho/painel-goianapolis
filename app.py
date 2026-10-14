@@ -5,17 +5,18 @@ import unicodedata
 
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 import streamlit as st
 
 # No Streamlit Cloud, um redeploy pode reexecutar app.py sem recarregar os módulos locais já importados;
 # aí a importação de uma função nova falha (ImportError). Recarregamos os módulos do projeto a cada execução.
-for _mod in ("ui", "dados_siconfi", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
+for _mod in ("ui", "dados_siconfi", "conferencias", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
              "pagina_fornecedores", "pagina_projecao", "pagina_capilaridade", "pagina_denuncia"):
     if _mod in sys.modules:
         importlib.reload(sys.modules[_mod])
 
-from ui import (CSS, TINTA, VERDE, brl, brl_curto, cabecalho, definir_secao, faltando, frases, grafico, heroi,
-                kpis, ler, num, pct)
+from ui import (AMBAR, CORAL, CSS, TINTA, VERDE, brl, brl_curto, cabecalho, definir_secao, faltando, frases,
+                grafico, heroi, kpis, ler, num, pct)
 
 POP_CENSO = 13967  # Censo 2022 (IBGE)
 
@@ -57,6 +58,21 @@ def anexo02_liquidado() -> pd.DataFrame | None:
 
 
 @st.cache_data
+def hierarquia_a2() -> pd.DataFrame | None:
+    """Função e subfunção com orçado, autorizado, empenhado e liquidado (último bimestre de cada ano)."""
+    from conferencias import hierarquia
+    a2 = ler("siconfi_rreo_anexo02.csv")
+    return None if a2 is None else hierarquia(a2)
+
+
+@st.cache_data
+def conferencias_ano(ano: int) -> list[dict]:
+    from conferencias import conferencias
+    a1, a2 = ler("siconfi_rreo_anexo01.csv"), ler("siconfi_rreo_anexo02.csv")
+    return [] if a1 is None or a2 is None else conferencias(a1, a2, ano)
+
+
+@st.cache_data
 def total_rreo2() -> pd.Series | None:
     a2 = ler("siconfi_rreo_anexo02.csv")
     if a2 is None:
@@ -77,12 +93,6 @@ def despesa_por_funcao() -> pd.DataFrame | None:
     inv = {c: a for a, cs in AREAS.items() for c in cs}
     f["area"] = f["funcao"].map(inv).fillna("Outras funções")
     return f.groupby(["exercicio", "area"], as_index=False)["valor"].sum()
-
-
-@st.cache_data
-def subfuncoes() -> pd.DataFrame | None:
-    base = anexo02_liquidado()
-    return None if base is None else base[base["subfuncao"].notna()].reset_index(drop=True)
 
 
 @st.cache_data
@@ -201,7 +211,10 @@ def pg_visao():
     vermelho, amarelo = contar(sic, "vermelho") + contar(pn, "vermelho"), contar(sic, "amarelo") + contar(pn, "amarelo")
 
     periodo = "ano fechado" if per == 6 else f"parcial, até o {per}º bimestre"
-    selos = [("info", f"{ANO} · {periodo}"), ("info", f"{num(pop)} habitantes")]
+    confs = conferencias_ano(ANO)
+    ok = sum(c["status"] == "ok" for c in confs)
+    selos = [("ok" if confs and ok == len(confs) else "alerta", f"✓ {ok}/{len(confs)} conferências entre demonstrativos"),
+             ("info", f"{ANO} · {periodo}"), ("info", f"{num(pop)} habitantes")]
     if vermelho:
         selos.append(("alerta", f"{vermelho} alerta(s) vermelho(s) de gasto"))
     if amarelo:
@@ -225,8 +238,10 @@ def pg_visao():
     itens.append((str(vermelho + amarelo), "áreas ou unidades gastaram acima da média histórica do mesmo período. "
                   "Sinal para acompanhar, não irregularidade.", "alerta" if vermelho else "atencao" if amarelo else "ok"))
     frases(itens)
+    l1, l2, _ = st.columns([1, 1, 2])
+    l1.page_link(_paginas["Conciliação"], label="Como os números são conferidos", icon="✅")
     if vermelho or amarelo:
-        st.page_link(_paginas["Alertas"], label="Ver os alertas em detalhe", icon="🚨")
+        l2.page_link(_paginas["Alertas"], label="Ver os alertas em detalhe", icon="🚨")
 
     c1, c2 = st.columns([3, 2])
     with c1:
@@ -267,23 +282,50 @@ def pg_despesas():
     tot = total_rreo2()
     if not areas and tot is not None and ANO in tot.index:
         dif = da["valor"].sum() - tot[ANO]
-        st.caption(f"Conferência: soma das funções = total do RREO Anexo 02 ({brl(tot[ANO])}); diferença {brl(dif)}.")
+        # "\\$" evita que dois "R$" na mesma linha virem fórmula matemática no Markdown
+        st.caption(f"Conferência: soma das funções = total do RREO Anexo 02 ({brl(tot[ANO])}); "
+                   f"diferença {brl(dif)}.".replace("$", "\\$"))
     kpis([("Total das áreas exibidas", brl_curto(da["valor"].sum()), brl(da["valor"].sum())),
           ("Maior área", da.iloc[-1]["area"]), ("Per capita (total exibido)", brl(da["valor"].sum() / pop_ano(ANO)))])
     grafico(px.bar(da, x="valor", y="area", orientation="h", title=f"Despesa liquidada por área em {ANO}",
                    labels={"valor": "R$", "area": ""}), "x")
     grafico(px.line(ate_ano(d), x="exercicio", y="valor", color="area", markers=True, title="Evolução anual",
                     labels={"valor": "R$", "exercicio": "Ano", "area": "Área"}))
-    sf = subfuncoes()
-    if sf is not None and not sf.empty:
-        s = sf[sf["exercicio"] == ANO]
+    h = hierarquia_a2()
+    if h is not None and not h.empty:
+        hy = h[h["exercicio"] == ANO]
         if areas:
             outras = [f for f in FUNCOES if f not in sum(AREAS.values(), [])]
-            s = s[s["funcao"].isin(sum((AREAS.get(a, outras) for a in areas), []))]
-        s = s[s["valor"] > 0].sort_values("valor", ascending=False)
-        with st.expander("Detalhe por subfunção"):
-            st.dataframe(s, width="stretch", hide_index=True,
-                         column_config={"valor": st.column_config.NumberColumn("Liquidado (R$)", format="localized")})
+            hy = hy[hy["funcao"].isin(sum((AREAS.get(a, outras) for a in areas), []))]
+        subs = hy[hy["subfuncao"].notna() & (hy["liquidado"].fillna(0) > 0)].assign(raiz="Despesa liquidada")
+        if not subs.empty:
+            st.subheader("Do total até a subfunção")
+            st.caption("Clique em uma função para abrir as subfunções; clique no topo para voltar.")
+            fig = px.treemap(subs, path=["raiz", "funcao", "subfuncao"], values="liquidado", color="funcao")
+            fig.update_traces(texttemplate="<b>%{label}</b><br>%{value:,.0f}<br>%{percentRoot:.1%}",
+                              hovertemplate="<b>%{label}</b><br>R$ %{value:,.2f}<br>%{percentRoot:.1%} do total<extra></extra>",
+                              root_color="#F3F5F1", marker=dict(cornerradius=4))
+            fig.update_layout(height=560, margin=dict(t=40, l=4, r=4, b=4), showlegend=False)
+            grafico(fig, None)
+        f = hy[hy["subfuncao"].isna() & (hy["liquidado"].fillna(0) > 0)].sort_values("liquidado", ascending=False)
+        if not f.empty:
+            total = f["liquidado"].sum()
+            rk = pd.DataFrame({
+                "Função": f["funcao"], "Liquidado (R$)": f["liquidado"], "Peso no total": f["liquidado"] / total,
+                "R$ por morador": (f["liquidado"] / pop_ano(ANO)).round(2),
+                "Execução do autorizado": f["liquidado"] / f["autorizado"].where(f["autorizado"] > 0)})
+            st.subheader("Ranking das funções")
+            st.dataframe(rk, width="stretch", hide_index=True, column_config={
+                "Liquidado (R$)": st.column_config.NumberColumn(format="localized"),
+                "Peso no total": st.column_config.ProgressColumn(format="percent", min_value=0,
+                                                                 max_value=float(rk["Peso no total"].max())),
+                "R$ por morador": st.column_config.NumberColumn(format="localized"),
+                "Execução do autorizado": st.column_config.ProgressColumn(format="percent", min_value=0, max_value=1)})
+            with st.expander("Tabela completa por subfunção (orçado, autorizado, empenhado, liquidado)"):
+                st.dataframe(hy.rename(columns={"exercicio": "Ano", "funcao": "Função", "subfuncao": "Subfunção",
+                                                "orcado": "Orçado", "autorizado": "Autorizado",
+                                                "empenhado": "Empenhado", "liquidado": "Liquidado"}),
+                             width="stretch", hide_index=True)
 
 
 def pg_receitas():
@@ -429,8 +471,48 @@ def pg_area(nome: str, extra: str = ""):
     with c2:
         grafico(px.bar(d, x="exercicio", y="per_capita", title="Per capita",
                        labels={"per_capita": "R$/hab.", "exercicio": "Ano"}))
+    abrir_subfuncoes(AREAS.get(nome, []), nome)
     if extra:
         st.info(extra)
+
+
+def abrir_subfuncoes(funcoes: list[str], nome: str):
+    """Capilaridade: subfunções da área, com autorizado × liquidado e evolução."""
+    h = hierarquia_a2()
+    if h is None or h.empty:
+        return
+    s = h[h["funcao"].isin(funcoes) & h["subfuncao"].notna()]
+    sa = s[s["exercicio"] == ANO].fillna({"liquidado": 0, "autorizado": 0})
+    sa = sa[(sa["liquidado"] > 0) | (sa["autorizado"] > 0)].sort_values("liquidado")
+    if sa.empty:
+        return
+    st.subheader(f"Dentro de {nome}: subfunções em {ANO}")
+    st.caption("Subfunção é o nível mais detalhado do orçamento por área publicado no SICONFI. "
+               "Execução = liquidado ÷ autorizado (dotação atualizada).")
+    execucao = sa["liquidado"] / sa["autorizado"].where(sa["autorizado"] > 0)
+    fig = go.Figure()
+    fig.add_bar(y=sa["subfuncao"], x=sa["autorizado"], orientation="h", name="Autorizado", marker_color="#D9E2DC",
+                hovertemplate="Autorizado: R$ %{x:,.2f}<extra></extra>")
+    rotulo = [f"{brl_curto(v)} · {pct(e * 100, 0)}" if pd.notna(e) else brl_curto(v)
+              for v, e in zip(sa["liquidado"], execucao)]
+    baixa_execucao = execucao.fillna(1) < 0.6
+    for mascara, nome_serie, cor in ((~baixa_execucao, "Liquidado", VERDE),
+                                     (baixa_execucao, "Liquidado, abaixo de 60% do autorizado", CORAL)):
+        if mascara.any():
+            fig.add_bar(y=sa["subfuncao"][mascara], x=sa["liquidado"][mascara], orientation="h", name=nome_serie,
+                        width=0.45, marker_color=cor, text=[t for t, m in zip(rotulo, mascara) if m],
+                        textposition="outside", cliponaxis=False, hovertemplate="Liquidado: R$ %{x:,.2f}<extra></extra>")
+    fig.update_layout(barmode="overlay", height=max(260, 62 * len(sa) + 120), margin=dict(r=120),
+                      title=f"Autorizado × liquidado por subfunção ({ANO})")
+    grafico(fig, "x")
+    baixa = sa[execucao < 0.6]
+    if not baixa.empty:
+        st.caption("Em coral: subfunções que executaram menos de 60% do autorizado ("
+                   + ", ".join(baixa["subfuncao"]) + "). Pode ser atraso, economia ou corte; vale acompanhar.")
+    ev = ate_ano(s).dropna(subset=["liquidado"])
+    if ev["subfuncao"].nunique() > 1:
+        grafico(px.bar(ev, x="exercicio", y="liquidado", color="subfuncao", title=f"{nome}: evolução por subfunção",
+                       labels={"liquidado": "R$", "exercicio": "Ano", "subfuncao": ""}))
 
 
 def pg_saude():

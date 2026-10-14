@@ -5,7 +5,8 @@ import plotly.express as px
 import streamlit as st
 
 from analises import area_pncp, contratacoes_validas
-from ui import brl, brl_curto, cabecalho, faltando, grafico, kpis, ler, pct
+from conferencias import conferencias
+from ui import brl, brl_curto, cabecalho, faltando, grafico, kpis, ler, pct, selos_conferencia
 
 AVISO = """
 **Indícios para verificação, não conclusões.** A comparação entre gasto (SICONFI) e contratações (PNCP) é
@@ -60,6 +61,12 @@ def pagina(ANO: int, despesa_por_funcao):
               "Receita × despesa (empenhada, liquidada, paga), resultado orçamentário e comparação entre o gasto "
               "por área e as contratações publicadas no PNCP.",
               "SICONFI (RREO Anexos 01 e 02) e PNCP.")
+    a1, a2 = ler("siconfi_rreo_anexo01.csv"), ler("siconfi_rreo_anexo02.csv")
+    if a1 is not None and a2 is not None:
+        st.subheader(f"0. Os números fecham? Conferências automáticas de {ANO}")
+        st.caption("Os anexos 01 e 02 do RREO são documentos diferentes enviados pela prefeitura ao Tesouro. "
+                   "Quando os totais coincidem até o centavo, a leitura por área e subfunção é confiável.")
+        selos_conferencia(conferencias(a1, a2, ANO))
     e = execucao()
     if e is None:
         return faltando("siconfi_rreo_anexo01.csv", "coleta/siconfi.py")
