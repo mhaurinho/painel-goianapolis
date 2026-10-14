@@ -5,6 +5,7 @@ import streamlit as st
 
 from analises import contratacoes_validas
 from gastos import categorizar, conferencia_dca_rreo, elementos
+from pagina_pessoal import msc_preparada, rotulo_periodo
 from ui import TINTA, VERDE, brl, brl_curto, cabecalho, faltando, frases, grafico, heroi, ler, pct, selos_conferencia
 
 FORA_DA_COMPRA = {"Pessoal", "Juros da dívida", "Amortização da dívida"}
@@ -113,6 +114,8 @@ def pagina(ANO: int):
                             "detalhe": f"DCA {brl(r.dca)} · RREO {brl(r.rreo)} · diferença {brl(r.diferenca)}"}
                            for r in conf.sort_values("exercicio", ascending=False).itertuples()])
 
+    dentro_da_area(ANO)
+
     st.subheader(f"Exemplos de compras publicadas no PNCP em {ANO}")
     c = ler("pncp_contratacoes.csv")
     if c is None:
@@ -143,3 +146,34 @@ def pagina(ANO: int):
                                   "numeroControlePNCP": "Controle PNCP"}),
                  width="stretch", hide_index=True,
                  column_config={"Homologado (R$)": st.column_config.NumberColumn(format="localized")})
+
+
+def dentro_da_area(ANO: int):
+    """Cruza área × item de despesa pela MSC: em Saúde, quanto foi pessoal, material, serviço..."""
+    m = msc_preparada()
+    if m is None or ANO not in set(m["exercicio"]):
+        return
+    ma = m[m["exercicio"] == ANO]
+    periodo = rotulo_periodo(m, ANO)
+    st.subheader(f"Dentro de uma área · {periodo}")
+    st.caption("Cruzamento da área de governo com o item de despesa, pela matriz contábil (MSC) que a prefeitura "
+               "envia ao Tesouro. O total confere com o RREO.")
+    areas = list(ma.groupby("area")["valor"].sum().sort_values(ascending=False).index)
+    area = st.selectbox("Área", areas, key="area_gastos")
+    x = ma[ma["area"] == area]
+    total = x["valor"].sum()
+    por_item = x.groupby(["grupo", "item"], as_index=False)["valor"].sum().sort_values("valor")
+    por_item = por_item[por_item["valor"] > 0]
+    fig = px.bar(por_item, x="valor", y="item", orientation="h", color="grupo", color_discrete_map=CORES_GRUPO,
+                 text=[f"{brl_curto(v)} · {pct(v / total * 100, 0)}" for v in por_item["valor"]],
+                 title=f"{area}: com o que foi gasto ({brl_curto(total)})", labels={"valor": "R$", "item": "", "grupo": ""})
+    fig.update_traces(textposition="outside", cliponaxis=False)
+    fig.update_layout(height=max(320, 34 * len(por_item) + 140), margin=dict(r=130))
+    fig.update_yaxes(categoryorder="total ascending")  # maior no topo, independentemente do grupo (cor)
+    grafico(fig, "x")
+    sub = x.groupby(["subarea", "item"], as_index=False)["valor"].sum()
+    sub = sub[sub["valor"] > 0].pivot_table(index="item", columns="subarea", values="valor", aggfunc="sum", fill_value=0)
+    if sub.shape[1] > 1:
+        with st.expander(f"{area} por serviço (subfunção) e item"):
+            st.dataframe(sub.reset_index().rename(columns={"item": "Item"}), width="stretch", hide_index=True,
+                         column_config={c: st.column_config.NumberColumn(format="localized") for c in sub.columns})

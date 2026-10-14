@@ -10,7 +10,7 @@ import streamlit as st
 
 # No Streamlit Cloud, um redeploy pode reexecutar app.py sem recarregar os módulos locais já importados;
 # aí a importação de uma função nova falha (ImportError). Recarregamos os módulos do projeto a cada execução.
-for _mod in ("ui", "dados_siconfi", "conferencias", "gastos", "pagina_gastos", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
+for _mod in ("ui", "dados_siconfi", "conferencias", "gastos", "msc", "pagina_pessoal", "pagina_gastos", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
              "pagina_fornecedores", "pagina_projecao", "pagina_capilaridade", "pagina_denuncia"):
     if _mod in sys.modules:
         importlib.reload(sys.modules[_mod])
@@ -368,30 +368,8 @@ def pg_receitas():
 
 
 def pg_pessoal():
-    cabecalho("Despesa com pessoal (LRF)",
-              "Despesa total com pessoal do Poder Executivo em % da Receita Corrente Líquida ajustada.",
-              "SICONFI, RGF Anexo 01 (quadrimestral; último quadrimestre disponível do ano).")
-    p = pessoal()
-    if p is None:
-        return faltando("siconfi_rgf_pessoal.csv", "coleta/siconfi_extra.py")
-    p = ate_ano(p)
-    pa = p[p["exercicio"] == ANO].set_index("indicador")["valor"]
-    if not pa.empty:
-        q = int(p.loc[p["exercicio"] == ANO, "periodo"].max())
-        st.caption(f"{ANO}: posição do {q}º quadrimestre (últimos 12 meses).")
-        dtp, lim = pa.get("Despesa com pessoal (% RCL)"), pa.get("Limite máximo")
-        if dtp is not None and lim is not None and dtp > lim:
-            st.error(f"Despesa com pessoal ({pct(dtp)}) acima do limite máximo da LRF ({pct(lim)}).")
-        elif dtp is not None and pa.get("Limite de alerta") is not None and dtp > pa.get("Limite de alerta"):
-            st.warning(f"Despesa com pessoal ({pct(dtp)}) acima do limite de alerta.")
-        kpis([("Despesa com pessoal", pct(pa.get("Despesa com pessoal (% RCL)"))),
-              ("Limite de alerta", pct(pa.get("Limite de alerta"))),
-              ("Limite prudencial", pct(pa.get("Limite prudencial"))),
-              ("Limite máximo", pct(pa.get("Limite máximo")))])
-    fig = px.line(p, x="exercicio", y="valor", color="indicador", markers=True, title="Pessoal em % da RCL",
-                  labels={"valor": "% da RCL", "exercicio": "Ano", "indicador": ""})
-    fig.update_yaxes(ticksuffix="%")
-    grafico(fig, None)
+    from pagina_pessoal import pagina
+    pagina(ANO, pessoal(), pop_ano(ANO))
 
 
 def pg_transferencias():

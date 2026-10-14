@@ -48,6 +48,7 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python coleta/siconfi.py        # RREO Anexos 01 e 02
 python coleta/siconfi_extra.py  # DCA (IPTU/ISS/ITBI e despesa por elemento) e RGF (pessoal)
+python coleta/siconfi_msc.py    # MSC: despesa por área × item × fonte (folha por área)
 python coleta/pncp.py           # contratações e contratos
 python coleta/ibge.py           # população
 python coleta/transferegov.py   # transferências especiais
