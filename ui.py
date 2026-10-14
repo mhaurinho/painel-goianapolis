@@ -87,6 +87,17 @@ def heroi(rotulo: str, numero: str, frase_html: str, selos=()):
                 f'<div class="chips">{chips}</div></section>', unsafe_allow_html=True)
 
 
+def selos_conferencia(itens):
+    """Lista de conferências com status visual. itens: dicts com teste, status, detalhe."""
+    simbolo = {"ok": "✓", "divergente": "✕", "lacuna": "!", "sem dado": "–"}
+    linhas = "".join(
+        f'<li class="check check-{escape(i["status"].replace(" ", "-"))}"><span class="check-icon">'
+        f'{simbolo.get(i["status"], "?")}</span><div><strong>{escape(i["teste"])}</strong>'
+        f'<small>{escape(i["detalhe"])}</small></div><span class="check-status">{escape(i["status"].upper())}</span></li>'
+        for i in itens)
+    st.markdown(f'<ul class="checks">{linhas}</ul>', unsafe_allow_html=True)
+
+
 def frases(itens):
     """Cartões 'frase-dado': número forte + leitura em linguagem comum. itens: (número, texto, tom)."""
     html = "".join(f'<div class="fact fact-{escape(tom)}"><div class="fact-n">{escape(n)}</div><p>{escape(t)}</p></div>'
@@ -163,7 +174,20 @@ div[data-testid="stMetricValue"] > div, div[data-testid="stMetricLabel"] p { whi
   overflow: visible !important; text-overflow: clip !important; }  /* valores longos quebram linha em vez de "R$ 86..." */
 [data-testid="stPlotlyChart"] { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 8px; overflow: hidden; }
 h2, h3 { color: var(--ink); letter-spacing: -.5px; font-weight: 800 !important; }
+.checks { list-style: none; padding: 0; margin: 4px 0 14px; display: grid; gap: 8px; }
+.check { display: grid; grid-template-columns: 34px 1fr auto; gap: 12px; align-items: center; background: #fff;
+  border: 1px solid var(--line); border-radius: 12px; padding: 11px 16px; margin: 0 !important; }
+.check strong { display: block; color: var(--ink); font-size: 14.5px; }
+.check small { color: var(--muted); font-family: var(--mono); font-size: 12px; }
+.check-icon { width: 30px; height: 30px; border-radius: 50%; display: inline-flex; align-items: center;
+  justify-content: center; font-weight: 800; }
+.check-status { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+.check-ok .check-icon { background: #E3F6DC; color: #2C6E1D; } .check-ok .check-status { color: #2C6E1D; }
+.check-divergente .check-icon { background: #FDE4DE; color: var(--coral); }
+.check-divergente { border-color: #F5C3B8; } .check-divergente .check-status { color: var(--coral); }
+.check-sem-dado .check-icon { background: #EEF1EF; color: var(--muted); } .check-sem-dado .check-status { color: var(--muted); }
 @media (max-width: 640px) {
+  .check { grid-template-columns: 30px 1fr; } .check-status { grid-column: 2; }
   .block-container { padding: 1.4rem 1rem 2rem; }
   h1.titulo, .hero-number { letter-spacing: -1px; }
 }
