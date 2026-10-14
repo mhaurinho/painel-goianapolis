@@ -64,6 +64,11 @@ streamlit run app.py
    O site fica em um endereço `*.streamlit.app`.
 6. Para atualizar os dados, rode os scripts de coleta e faça commit e push dos CSVs. O app reinicia sozinho.
 
+## Atualização automática
+Todo dia 5 o GitHub Actions (`.github/workflows/coleta.yml`) roda os coletores, devolve a versão anterior de
+qualquer base que encolher mais de 10% (`coleta/validar.py`), roda os testes e faz commit das bases novas.
+O Streamlit Cloud reinicia sozinho. Para rodar fora do dia 5: aba **Actions** → *Coleta mensal dos dados* → *Run workflow*.
+
 ## Privacidade
 CPFs de fornecedores pessoa física (e o CPF embutido no nome de MEIs) são mascarados na coleta
 (`coleta/privacidade.py`), no formato ***.456.789-**. CNPJs são mantidos.

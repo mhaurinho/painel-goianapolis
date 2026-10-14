@@ -1,0 +1,56 @@
+# Atualiza as bases todo mês e publica. O Streamlit Cloud reinicia sozinho a cada commit no main.
+name: Coleta mensal dos dados
+
+on:
+  schedule:
+    - cron: "0 9 5 * *"   # dia 5, 06:00 em Brasília (SICONFI fecha os prazos do bimestre no fim do mês)
+  workflow_dispatch:       # botão "Run workflow" na aba Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: coleta
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Dependências
+        run: pip install -r requirements.txt
+
+      - name: Coletar (uma falha não interrompe as demais)
+        working-directory: coleta
+        run: |
+          for script in siconfi.py siconfi_extra.py siconfi_msc.py pncp.py ibge.py transferegov.py; do
+            echo "::group::$script"
+            timeout 1800 python "$script" || echo "::warning::$script falhou; a base anterior será mantida"
+            echo "::endgroup::"
+          done
+
+      - name: Devolver bases que encolheram
+        run: python coleta/validar.py
+
+      - name: Testes
+        run: python -m unittest discover -s tests -v
+
+      - name: Publicar se algo mudou
+        run: |
+          git add dados/
+          if git diff --cached --quiet; then
+            echo "Nenhuma base mudou."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Dados: coleta automática de $(date -u +%Y-%m-%d)" -m "$(git diff --cached --stat | tail -1)"
+          git push
