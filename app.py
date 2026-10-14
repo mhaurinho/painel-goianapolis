@@ -238,7 +238,7 @@ def pg_visao():
     itens.append((str(vermelho + amarelo), "áreas ou unidades gastaram acima da média histórica do mesmo período. "
                   "Sinal para acompanhar, não irregularidade.", "alerta" if vermelho else "atencao" if amarelo else "ok"))
     frases(itens)
-    l1, l2, _ = st.columns([1, 1, 2])
+    l1, l2 = st.columns(2)
     l1.page_link(_paginas["Conciliação"], label="Como os números são conferidos", icon="✅")
     if vermelho or amarelo:
         l2.page_link(_paginas["Alertas"], label="Ver os alertas em detalhe", icon="🚨")
