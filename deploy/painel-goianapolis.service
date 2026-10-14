@@ -1,15 +1,28 @@
 [Unit]
 Description=Painel Goianapolis em Numeros (Streamlit)
-After=network.target
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 Type=simple
 User=painel
 Group=painel
 WorkingDirectory=/opt/painel-goianapolis
-ExecStart=/opt/painel-goianapolis/.venv/bin/streamlit run app.py --server.address 127.0.0.1 --server.port 8501 --server.headless true --browser.gatherUsageStats false
-Restart=on-failure
-RestartSec=5
+Environment=HOME=/var/lib/painel-goianapolis
+# Sem file watcher: em produção o código só muda pelo deploy, que reinicia o serviço.
+ExecStart=/opt/painel-goianapolis/.venv/bin/streamlit run app.py \
+  --server.address 127.0.0.1 --server.port 8501 --server.headless true \
+  --server.fileWatcherType none --server.runOnSave false \
+  --browser.gatherUsageStats false --client.toolbarMode viewer
+Restart=always
+RestartSec=3
+# Limites para não disputar recursos com os outros projetos da VPS.
+Nice=5
+CPUQuota=150%
+MemoryMax=1500M
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
 
 [Install]
 WantedBy=multi-user.target

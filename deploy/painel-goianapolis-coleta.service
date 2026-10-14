@@ -1,0 +1,9 @@
+[Unit]
+Description=Coleta mensal das bases do painel Goianapolis
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+Nice=10
+ExecStart=/opt/painel-goianapolis/deploy/coletar-dados.sh

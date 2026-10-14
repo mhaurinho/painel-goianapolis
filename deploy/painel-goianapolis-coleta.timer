@@ -1,0 +1,10 @@
+[Unit]
+Description=Coleta no dia 5 de cada mês (SICONFI publica por bimestre)
+
+[Timer]
+OnCalendar=*-*-05 04:00
+RandomizedDelaySec=30min
+Persistent=true
+
+[Install]
+WantedBy=timers.target
