@@ -63,6 +63,10 @@ streamlit run app.py
    O site fica em um endereço `*.streamlit.app`.
 6. Para atualizar os dados, rode os scripts de coleta e faça commit e push dos CSVs. O app reinicia sozinho.
 
+## Privacidade
+CPFs de fornecedores pessoa física (e o CPF embutido no nome de MEIs) são mascarados na coleta
+(`coleta/privacidade.py`), no formato ***.456.789-**. CNPJs são mantidos.
+
 ## Estrutura
 - `app.py`: painel e páginas principais
 - `ui.py`: tema Plotly, cartões de KPI e formato brasileiro (R$ 1.234,56)
@@ -72,6 +76,3 @@ streamlit run app.py
 - `coleta/`: scripts de coleta das APIs
 - `dados/`: CSVs e lista de fontes
 - `docs/esboco.md`: esboço do painel e o levantamento de fontes
-
-## Deploy em VPS própria
-Veja `deploy/README-VPS.md` (systemd + nginx na porta 8080).

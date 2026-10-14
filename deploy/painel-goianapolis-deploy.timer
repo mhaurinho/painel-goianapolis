@@ -1,9 +1,0 @@
-[Unit]
-Description=Verifica o GitHub a cada 10 minutos
-
-[Timer]
-OnBootSec=2min
-OnUnitActiveSec=10min
-
-[Install]
-WantedBy=timers.target

@@ -6,6 +6,7 @@ import pandas as pd
 import requests
 
 from municipio import CNPJ, IBGE  # noqa: F401
+from privacidade import mascarar_colunas
 
 URL = "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao"
 DADOS = Path(__file__).resolve().parent.parent / "dados"
@@ -108,13 +109,13 @@ def main():
     for ano in range(2023, date.today().year + 1):
         contratos += baixar_contratos(ano)
     if contratos:
-        pd.DataFrame(contratos).to_csv(DADOS / "pncp_contratos.csv", index=False)
+        mascarar_colunas(pd.DataFrame(contratos)).to_csv(DADOS / "pncp_contratos.csv", index=False)
         print(f"Salvo pncp_contratos.csv: {len(contratos)} linhas")
     linhas = []
     for ano in range(2023, date.today().year + 1):
         linhas += baixar_ano(ano)
     if linhas:
-        pd.DataFrame(linhas).to_csv(DADOS / "pncp_contratacoes.csv", index=False)
+        mascarar_colunas(pd.DataFrame(linhas)).to_csv(DADOS / "pncp_contratacoes.csv", index=False)
         print(f"Salvo pncp_contratacoes.csv: {len(linhas)} linhas")
 
 
