@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+import valores
+
 from msc import folha, preparar
 from ui import (CORAL, brl, brl_curto, cabecalho, faltando, frases, grafico, heroi, ler, num, pct)
 
@@ -131,8 +133,8 @@ def pagina(ANO: int, p: pd.DataFrame | None, populacao: int):
         principais = list(top.index[:5])
         ev["area"] = ev["area"].where(ev["area"].isin(principais), "Demais áreas")
         ev = ev.groupby(["exercicio", "periodo", "area"], as_index=False)["valor"].sum()
-        grafico(px.bar(ev[ev["exercicio"] <= ANO], x="periodo", y="valor", color="area",
-                       title="Folha por área ao longo dos anos (valores nominais)",
+        grafico(px.bar(valores.ajustar(ev[ev["exercicio"] <= ANO]), x="periodo", y="valor", color="area",
+                       title=f"Folha por área ao longo dos anos · {valores.unidade()}",
                        labels={"valor": "R$", "periodo": "", "area": ""}))
         st.caption("A folha da MSC inclui a Câmara Municipal; o limite da LRF acima é só do Poder Executivo. "
                    "Fontes agrupadas pelo padrão do Tesouro: 'recursos próprios' são impostos e transferências "

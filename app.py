@@ -10,7 +10,7 @@ import streamlit as st
 
 # No Streamlit Cloud, um redeploy pode reexecutar app.py sem recarregar os módulos locais já importados;
 # aí a importação de uma função nova falha (ImportError). Recarregamos os módulos do projeto a cada execução.
-for _mod in ("ui", "dados_siconfi", "conferencias", "gastos", "msc", "pagina_pessoal", "pagina_gastos", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
+for _mod in ("ui", "valores", "dados_siconfi", "conferencias", "gastos", "msc", "pagina_pessoal", "pagina_gastos", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
              "pagina_fornecedores", "pagina_projecao", "pagina_capilaridade", "pagina_denuncia"):
     if _mod in sys.modules:
         importlib.reload(sys.modules[_mod])
@@ -24,6 +24,7 @@ st.set_page_config(page_title="Goianápolis em Números", page_icon="📊", layo
 st.markdown(CSS, unsafe_allow_html=True)
 
 from dados_siconfi import AREAS, FUNCOES  # noqa: E402
+import valores  # noqa: E402
 
 
 # ---------------------------------------------------------------- preparação de dados
@@ -178,6 +179,12 @@ ANO = st.sidebar.selectbox("Ano (filtro global)", _ANOS, index=ano_padrao(_ANOS)
                            help="Vale para todas as páginas. Séries históricas mostram os anos até o selecionado.")
 
 
+MODO = st.sidebar.radio("Valores nas séries", valores.MODOS,
+                        help="Vale para os gráficos de evolução ao longo dos anos. 'Corrigidos pela inflação' leva "
+                             "todos os anos a preços de hoje pelo IPCA; 'Por morador' divide pela população de cada ano.")
+valores.configurar(MODO, *valores.fatores_ipca(ler("ipca.csv")), populacao=lambda a: pop_ano(int(a)))
+
+
 def ate_ano(df, col="exercicio"):
     return df[df[col] <= ANO]
 
@@ -235,6 +242,19 @@ def pg_visao():
                       f"{top2['area'].iloc[1]}." if len(top2) == 2 else "da despesa foi para a maior área.", "ok"))
     if rec:
         itens.append((brl(rec / pop, 0), "de receita por morador no ano, somando arrecadação própria e repasses.", "ok"))
+    fechados = sorted(a for a, g in d.groupby("exercicio") if g["periodo"].max() == 6 and a <= ANO)
+    if len(fechados) > 1 and per == 6:
+        a0 = fechados[0]
+        x0 = d[(d["exercicio"] == a0) & d["conta"].astype(str).str.startswith("DESPESAS (EXCETO INTRA")
+               & d["coluna"].astype(str).str.contains("LIQUIDADAS ATÉ O BIMESTRE", case=False)]["valor"]
+        real = valores.crescimento_real(float(x0.iloc[0]), a0, desp, ANO) if len(x0) and desp else None
+        if real is not None:
+            nominal = (desp / float(x0.iloc[0]) - 1) * 100
+            por_morador = valores.crescimento_real(float(x0.iloc[0]) / pop_ano(a0), a0, desp / pop, ANO)
+            itens.append((f"{'+' if real >= 0 else ''}{pct(real, 0)}",
+                          f"foi o crescimento real da despesa de {a0} a {ANO}, já descontada a inflação "
+                          f"(nominal: +{pct(nominal, 0)}). Por morador, {'+' if por_morador >= 0 else ''}{pct(por_morador, 0)}.",
+                          "ok"))
     itens.append((str(vermelho + amarelo), "áreas ou unidades gastaram acima da média histórica do mesmo período. "
                   "Sinal para acompanhar, não irregularidade.", "alerta" if vermelho else "atencao" if amarelo else "ok"))
     frases(itens)
@@ -259,8 +279,8 @@ def pg_visao():
                 if len(x):
                     serie.append({"ano": ano_, "tipo": rot, "valor": float(x["valor"].iloc[0])})
         if serie:
-            fig = px.line(pd.DataFrame(serie), x="ano", y="valor", color="tipo", markers=True,
-                          title="Receita × despesa", labels={"valor": "R$", "ano": "Ano", "tipo": ""},
+            fig = px.line(valores.ajustar(pd.DataFrame(serie), ano="ano"), x="ano", y="valor", color="tipo", markers=True,
+                          title=f"Receita × despesa · {valores.unidade()}", labels={"valor": "R$", "ano": "Ano", "tipo": ""},
                           color_discrete_map={"Receita": VERDE, "Despesa liquidada": TINTA})
             fig.update_traces(line_width=3, marker_size=8)
             grafico(fig)
@@ -289,7 +309,8 @@ def pg_despesas():
           ("Maior área", da.iloc[-1]["area"]), ("Per capita (total exibido)", brl(da["valor"].sum() / pop_ano(ANO)))])
     grafico(px.bar(da, x="valor", y="area", orientation="h", title=f"Despesa liquidada por área em {ANO}",
                    labels={"valor": "R$", "area": ""}), "x")
-    grafico(px.line(ate_ano(d), x="exercicio", y="valor", color="area", markers=True, title="Evolução anual",
+    grafico(px.line(valores.ajustar(ate_ano(d)), x="exercicio", y="valor", color="area", markers=True,
+                    title=f"Evolução anual · {valores.unidade()}",
                     labels={"valor": "R$", "exercicio": "Ano", "area": "Área"}))
     h = hierarquia_a2()
     if h is not None and not h.empty:
@@ -341,7 +362,8 @@ def pg_receitas():
     x = ate_ano(x.groupby(["exercicio", "conta"], as_index=False)["valor"].max())
     x["conta"] = x["conta"].replace({"RECEITAS CORRENTES": "Receitas correntes", "RECEITAS DE CAPITAL": "Receitas de capital",
                                      "OUTRAS RECEITAS CORRENTES": "Outras receitas correntes"})
-    grafico(px.bar(x, x="exercicio", y="valor", color="conta", barmode="group", title="Receitas realizadas por ano",
+    grafico(px.bar(valores.ajustar(x), x="exercicio", y="valor", color="conta", barmode="group",
+                   title=f"Receitas realizadas por ano · {valores.unidade()}",
                    labels={"valor": "R$", "exercicio": "Ano", "conta": ""}))
     st.subheader("Arrecadação própria: IPTU, ISS e ITBI")
     t = tributos()
@@ -359,7 +381,8 @@ def pg_receitas():
               ("ITBI", brl_curto(ta.get("ITBI")), brl(ta.get("ITBI"))),
               ("IPTU+ISS+ITBI / receitas correntes", pct(100 * proprios / rc) if rc else "n/d")])
     tt = t[t["tributo"].isin(["IPTU", "ISS", "ITBI"])]
-    grafico(px.line(tt, x="exercicio", y="valor", color="tributo", markers=True, title="Arrecadação por tributo",
+    grafico(px.line(valores.ajustar(tt), x="exercicio", y="valor", color="tributo", markers=True,
+                    title=f"Arrecadação por tributo · {valores.unidade()}",
                     labels={"valor": "R$", "exercicio": "Ano", "tributo": ""}))
     pc = tt.assign(per_capita=tt.apply(lambda r: r["valor"] / pop_ano(int(r["exercicio"])), axis=1))
     grafico(px.bar(pc, x="exercicio", y="per_capita", color="tributo", barmode="group",
@@ -445,7 +468,8 @@ def pg_area(nome: str, extra: str = ""):
         kpis([(f"Despesa liquidada {ANO}", brl_curto(r["valor"]), brl(r["valor"])), ("Per capita", brl(r["per_capita"]))])
     c1, c2 = st.columns(2)
     with c1:
-        grafico(px.bar(d, x="exercicio", y="valor", title="Despesa liquidada", labels={"valor": "R$", "exercicio": "Ano"}))
+        grafico(px.bar(valores.ajustar(d), x="exercicio", y="valor", title=f"Despesa liquidada · {valores.unidade()}",
+                       labels={"valor": "R$", "exercicio": "Ano"}))
     with c2:
         grafico(px.bar(d, x="exercicio", y="per_capita", title="Per capita",
                        labels={"per_capita": "R$/hab.", "exercicio": "Ano"}))
@@ -489,7 +513,8 @@ def abrir_subfuncoes(funcoes: list[str], nome: str):
                    + ", ".join(baixa["subfuncao"]) + "). Pode ser atraso, economia ou corte; vale acompanhar.")
     ev = ate_ano(s).dropna(subset=["liquidado"])
     if ev["subfuncao"].nunique() > 1:
-        grafico(px.bar(ev, x="exercicio", y="liquidado", color="subfuncao", title=f"{nome}: evolução por subfunção",
+        grafico(px.bar(valores.ajustar(ev, "liquidado"), x="exercicio", y="liquidado", color="subfuncao",
+                       title=f"{nome}: evolução por subfunção · {valores.unidade()}",
                        labels={"liquidado": "R$", "exercicio": "Ano", "subfuncao": ""}))
 
 

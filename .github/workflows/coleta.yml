@@ -18,9 +18,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -31,7 +31,7 @@ jobs:
       - name: Coletar (uma falha não interrompe as demais)
         working-directory: coleta
         run: |
-          for script in siconfi.py siconfi_extra.py siconfi_msc.py pncp.py ibge.py transferegov.py; do
+          for script in siconfi.py siconfi_extra.py siconfi_msc.py pncp.py ibge.py transferegov.py ipca.py; do
             echo "::group::$script"
             timeout 1800 python "$script" || echo "::warning::$script falhou; a base anterior será mantida"
             echo "::endgroup::"

@@ -1,5 +1,7 @@
 """Transferências especiais (emendas parlamentares "PIX") para Goianápolis, via API do Transferegov."""
+import time
 from pathlib import Path
+
 import pandas as pd
 import requests
 
@@ -14,7 +16,17 @@ def main():
               "select": "codigo_plano_acao,ano_plano_acao,situacao_plano_acao,nome_parlamentar_emenda_plano_acao,"
                         "valor_custeio_plano_acao,valor_investimento_plano_acao,"
                         "codigo_descricao_areas_politicas_publicas_plano_acao"}
-    df = pd.DataFrame(requests.get(URL, params=params, timeout=90).json())
+    for tentativa in range(1, 4):
+        r = requests.get(URL, params=params, timeout=90,
+                         headers={"User-Agent": "painel-goianapolis/1.0", "Accept": "application/json"})
+        if r.ok and r.headers.get("content-type", "").startswith("application/json"):
+            break
+        # APIs do gov.br às vezes devolvem página de bloqueio (HTML) para IPs de datacenter fora do Brasil
+        print(f"Tentativa {tentativa}: HTTP {r.status_code}, {r.headers.get('content-type')}: {r.text[:120]!r}")
+        time.sleep(10 * tentativa)
+    else:
+        raise SystemExit("Transferegov não devolveu JSON; a base anterior é mantida.")
+    df = pd.DataFrame(r.json())
     df = df.rename(columns=lambda c: c.replace("_plano_acao", ""))
     df["valor_total"] = df["valor_custeio"].astype(float) + df["valor_investimento"].astype(float)
     DADOS.mkdir(exist_ok=True)

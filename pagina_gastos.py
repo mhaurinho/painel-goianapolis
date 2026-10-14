@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+import valores
+
 from analises import contratacoes_validas
 from gastos import categorizar, conferencia_dca_rreo, elementos
 from pagina_pessoal import msc_preparada, rotulo_periodo
@@ -90,8 +92,8 @@ def pagina(ANO: int):
     escolhidos = st.multiselect("Itens no gráfico", sorted(e["elemento"].unique()), default=principais)
     ev = e[e["elemento"].isin(escolhidos) & (e["exercicio"] <= ano)]
     if not ev.empty:
-        grafico(px.line(ev, x="exercicio", y="valor", color="elemento", markers=True,
-                        title="Despesa liquidada por elemento (valores nominais)",
+        grafico(px.line(valores.ajustar(ev), x="exercicio", y="valor", color="elemento", markers=True,
+                        title=f"Despesa liquidada por elemento · {valores.unidade()}",
                         labels={"valor": "R$", "exercicio": "Ano", "elemento": ""}))
 
     st.subheader(f"Todos os itens de {ano}")
