@@ -1,4 +1,5 @@
-"""Coleta DCA (Anexo I-C: receitas, inclui IPTU/ISS/ITBI) e RGF (Anexo 01: despesa com pessoal) do SICONFI."""
+"""Coleta DCA (Anexo I-C: receitas, inclui IPTU/ISS/ITBI; Anexo I-D: despesa por elemento) e RGF (Anexo 01:
+despesa com pessoal) do SICONFI."""
 import time
 from datetime import date
 from pathlib import Path
@@ -22,8 +23,21 @@ def get(endpoint, params):
     return []
 
 
+def dca_despesas():
+    """DCA Anexo I-D: despesa anual por natureza até o elemento (material de consumo, obras, serviços...)."""
+    linhas = []
+    for ano in range(2020, date.today().year):
+        itens = get("dca", {"an_exercicio": ano, "no_anexo": "DCA-Anexo I-D", "id_ente": ID_ENTE})
+        print(f"DCA I-D {ano}: {len(itens)}")
+        linhas += itens
+        time.sleep(1)
+    if linhas:
+        pd.DataFrame(linhas).to_csv(DADOS / "siconfi_dca_despesas.csv", index=False)
+
+
 def main():
     DADOS.mkdir(exist_ok=True)
+    dca_despesas()
     dca = []
     for ano in range(2020, date.today().year):
         itens = get("dca", {"an_exercicio": ano, "no_anexo": "DCA-Anexo I-C", "id_ente": ID_ENTE})
