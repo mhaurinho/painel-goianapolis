@@ -88,8 +88,8 @@ def pagina(ANO: int, despesa_por_funcao):
                -(r["JUROS E ENCARGOS DA DÍVIDA"] + r["AMORTIZAÇÃO DA DÍVIDA"]),
                -(r["liquidada"] - r["nao_licitavel"]), 0],
             connector={"line": {"color": "#B0B7B3"}},
-            increasing={"marker": {"color": "#1B6F4A"}}, decreasing={"marker": {"color": "#C0504D"}},
-            totals={"marker": {"color": "#2F80ED"}}))
+            increasing={"marker": {"color": "#0A8F6E"}}, decreasing={"marker": {"color": "#E8553A"}},
+            totals={"marker": {"color": "#2878A0"}}))
         fig.update_layout(title=f"Da receita ao resultado em {ANO} (despesa liquidada)")
         grafico(fig)
     longo = e.melt(id_vars="exercicio", value_vars=["receita", "empenhada", "liquidada", "paga"],
@@ -101,7 +101,7 @@ def pagina(ANO: int, despesa_por_funcao):
     res = e[["exercicio", "resultado"]].copy()
     res["sinal"] = res["resultado"].map(lambda v: "Superávit" if v >= 0 else "Déficit")
     grafico(px.bar(res, x="exercicio", y="resultado", color="sinal", title="Resultado orçamentário (receita − empenhada)",
-                   color_discrete_map={"Superávit": "#1B6F4A", "Déficit": "#C0504D"},
+                   color_discrete_map={"Superávit": "#0A8F6E", "Déficit": "#E8553A"},
                    labels={"resultado": "R$", "exercicio": "Ano", "sinal": ""}))
     st.caption("**Por fonte/vínculo (saúde, educação/Fundeb):** os anexos do RREO com vinculações (Anexo 08, MDE, e "
                "Anexo 12, saúde) não estão disponíveis na API do SICONFI para Goianápolis (só Anexos 01, 02, 03, "
