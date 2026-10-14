@@ -10,7 +10,7 @@ import streamlit as st
 
 # No Streamlit Cloud, um redeploy pode reexecutar app.py sem recarregar os módulos locais já importados;
 # aí a importação de uma função nova falha (ImportError). Recarregamos os módulos do projeto a cada execução.
-for _mod in ("ui", "dados_siconfi", "conferencias", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
+for _mod in ("ui", "dados_siconfi", "conferencias", "gastos", "pagina_gastos", "analises", "alertas", "pagina_auditoria", "pagina_conciliacao",
              "pagina_fornecedores", "pagina_projecao", "pagina_capilaridade", "pagina_denuncia"):
     if _mod in sys.modules:
         importlib.reload(sys.modules[_mod])
@@ -669,6 +669,11 @@ def pg_projecao():
     pagina(ANO)
 
 
+def pg_gastos():
+    from pagina_gastos import pagina
+    pagina(ANO)
+
+
 def pg_capilaridade():
     from pagina_capilaridade import pagina
     pagina(ANO)
@@ -693,6 +698,7 @@ def pg_conciliacao():
 GRUPOS = {
     "Panorama": [("Visão geral", pg_visao, "📊"), ("Alertas", pg_alertas, "🚨")],
     "Dinheiro": [("Receitas e tributos", pg_receitas, "💰"), ("Despesas", pg_despesas, "💸"),
+                 ("Com o que foi gasto", pg_gastos, "🛒"),
                  ("Pessoal (LRF)", pg_pessoal, "👥"), ("Transferências", pg_transferencias, "🔁"),
                  ("Projeção", pg_projecao, "📈")],
     "Áreas": [("Saúde", pg_saude, "🏥"), ("Educação", pg_educacao, "🎓"), ("Demais áreas", pg_demais, "🧭"),

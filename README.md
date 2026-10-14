@@ -18,7 +18,7 @@ esporte e meio ambiente não têm indicadores municipais de resultado. IPTU, ISS
 ## Páginas
 Visão geral · Despesas (filtro por função de governo) · Receitas e tributos (IPTU/ISS/ITBI) · Pessoal (LRF) ·
 Transferências (emendas especiais) · Compras (filtro por unidade/órgão do PNCP) · Saúde · Educação ·
-Demais áreas · **Alertas** · **Auditoria** · **Conciliação** · **Fornecedores** · **Projeção** · **Capilaridade** · **Denúncia anônima** · Sobre os dados.
+Demais áreas · **Com o que foi gasto** · **Alertas** · **Auditoria** · **Conciliação** · **Fornecedores** · **Projeção** · **Capilaridade** · **Denúncia anônima** · Sobre os dados.
 
 A página **Denúncia anônima** não grava, envia nem registra nada: apenas monta um texto na tela e aponta para os canais oficiais (TCM-GO, Fala.BR/CGU, MPGO).
 
@@ -47,7 +47,7 @@ Lista completa em `dados/fontes.md`.
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 python coleta/siconfi.py        # RREO Anexos 01 e 02
-python coleta/siconfi_extra.py  # DCA (IPTU/ISS/ITBI) e RGF (pessoal)
+python coleta/siconfi_extra.py  # DCA (IPTU/ISS/ITBI e despesa por elemento) e RGF (pessoal)
 python coleta/pncp.py           # contratações e contratos
 python coleta/ibge.py           # população
 python coleta/transferegov.py   # transferências especiais

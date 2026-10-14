@@ -1,0 +1,791 @@
+exercicio,instituicao,cod_ibge,uf,anexo,rotulo,coluna,cod_conta,conta,valor,populacao
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,TotalDespesas,Total Geral da Despesa,36622301.5,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,TotalDespesas,Total Geral da Despesa,36622301.5,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,TotalDespesas,Total Geral da Despesa,36447191.95,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,33213318.52,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,33213318.52,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,33038208.97,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,18745508.67,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,18745508.67,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,18656915.08,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,18745508.67,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,18745508.67,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,18656915.08,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",32605.3,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",32605.3,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",32605.3,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,165277.79,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,165277.79,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,165277.79,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,14691093.17,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,14691093.17,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,14691093.17,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,3855872.41,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,3855872.41,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,3767278.82,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,3845195.02,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,3845195.02,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,3756601.43,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.08.00,3.1.90.13.08 - Plano de Seg. Soc. do Servidor - Pessoal Ativo,10677.39,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.08.00,3.1.90.13.08 - Plano de Seg. Soc. do Servidor - Pessoal Ativo,10677.39,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.08.00,3.1.90.13.08 - Plano de Seg. Soc. do Servidor - Pessoal Ativo,10677.39,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.92.00.00,3.1.90.92.00 - Despesas de Exercícios Anteriores,660.0,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.92.00.00,3.1.90.92.00 - Despesas de Exercícios Anteriores,660.0,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.92.00.00,3.1.90.92.00 - Despesas de Exercícios Anteriores,660.0,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,14467809.85,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,14467809.85,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,14381293.89,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,33273.78,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,33273.78,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,33273.78,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,14434536.07,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,14434536.07,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,14348020.11,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.14.00.00,3.3.90.14.00 - Diárias - Civil,124.08,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.14.00.00,3.3.90.14.00 - Diárias - Civil,124.08,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.14.00.00,3.3.90.14.00 - Diárias - Civil,124.08,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,5966132.76,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,5966132.76,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,5945719.16,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",1660.0,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",1660.0,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",1660.0,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,441466.67,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,441466.67,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,441466.67,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2111473.09,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2111473.09,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2111473.09,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,4701828.28,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,4701828.28,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,4691725.92,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,335186.18,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,335186.18,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,335186.18,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,104991.05,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,104991.05,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,104991.05,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,752238.5,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,752238.5,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,696238.5,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,19435.46,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,19435.46,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,19435.46,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,3408982.98,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,3408982.98,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,3408982.98,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,2718744.92,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,2718744.92,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,2718744.92,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,2718744.92,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,2718744.92,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,2718744.92,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,1941502.35,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,1941502.35,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,1941502.35,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,1941502.35,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,1941502.35,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,1941502.35,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,777242.57,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,777242.57,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,777242.57,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,690238.06,11231
+2020,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,690238.06,11231
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,TotalDespesas,Total Geral da Despesa,43245321.12,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,TotalDespesas,Total Geral da Despesa,43218804.92,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,TotalDespesas,Total Geral da Despesa,42664556.55,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,TotalDespesas,Total Geral da Despesa,26516.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,TotalDespesas,Total Geral da Despesa,554248.37,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,36563116.48,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,36536600.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,36505182.11,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,26516.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,31418.17,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,20698217.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,20698217.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,20698217.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,20698217.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,20698217.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,20698217.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",32605.3,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",32605.3,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",32605.3,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,167372.24,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,167372.24,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,167372.24,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,16460022.32,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,16460022.32,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,16460022.32,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,3578693.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,3578693.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,3578693.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,3578693.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,3578693.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,3578693.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,327524.06,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,327524.06,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,327524.06,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,132000.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,132000.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,132000.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,15864899.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,15838383.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,15806964.83,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,26516.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,31418.17,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,34270.93,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,34270.93,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,34270.93,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,15830628.27,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,15804112.07,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,15772693.9,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,26516.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,31418.17,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,6977790.85,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,6977027.65,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,6969309.48,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,763.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,7718.17,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",69307.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",69307.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",69307.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,488400.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,488400.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,488400.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,1832057.61,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,1832057.61,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,1832057.61,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,5613627.78,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,5587874.78,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,5564174.78,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,25753.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,23700.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,830.65,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,830.65,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,830.65,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,467350.26,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,467350.26,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,467350.26,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,72152.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,72152.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,72152.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,39350.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,39350.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,39350.0,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,269762.12,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,269762.12,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,269762.12,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6682204.64,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6682204.64,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6159374.44,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,522830.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,5709821.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,5709821.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,5186991.08,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,522830.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,5709821.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,5709821.28,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,5186991.08,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,522830.2,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,3815902.51,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,3815902.51,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,3727937.86,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,87964.65,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,3815902.51,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,3815902.51,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,3727937.86,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,87964.65,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1893918.77,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1893918.77,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1459053.22,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,434865.55,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,972383.36,11224
+2021,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,972383.36,11224
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,TotalDespesas,Total Geral da Despesa,53976009.67,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,TotalDespesas,Total Geral da Despesa,53940768.84,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,TotalDespesas,Total Geral da Despesa,53532142.05,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,TotalDespesas,Total Geral da Despesa,35240.83,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,TotalDespesas,Total Geral da Despesa,408626.79,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,47282875.02,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,47252099.19,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,47221845.4,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,30775.83,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,30253.79,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,25116741.66,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,25116741.66,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,25116741.66,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,25116741.66,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,25116741.66,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,25116741.66,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias, Reserva Remunerada e Reformas",36994.62,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias, Reserva Remunerada e Reformas",36994.62,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias, Reserva Remunerada e Reformas",36994.62,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões,185212.51,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões,185212.51,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões,185212.51,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,20598838.7,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,20598838.7,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,20598838.7,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4161446.56,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4161446.56,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4161446.56,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4161446.56,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4161446.56,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4161446.56,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,134249.27,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,134249.27,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,134249.27,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,22166133.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,22135357.53,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,22105103.74,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,30775.83,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,30253.79,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,37352.38,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,37352.38,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,37352.38,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,22128780.98,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,22098005.15,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,22067751.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,30775.83,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,30253.79,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,9153630.7,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,9153630.67,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,9144635.66,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,0.03,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,8995.01,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",15202.2,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",15202.2,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",15202.2,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",79733.02,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",79733.02,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",79733.02,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,949859.69,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,949859.69,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,947559.69,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,2300.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2013467.8,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2013467.8,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2013467.8,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,7729177.19,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,7701701.39,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,7682831.39,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,27475.8,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,18870.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,277023.12,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,273723.12,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,273723.12,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,3300.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,654759.59,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,654759.59,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,654670.81,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,88.78,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,1200.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,1200.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,1200.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,734419.34,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,734419.34,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,734419.34,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,12733.69,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,12733.69,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,12733.69,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,489574.64,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,489574.64,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,489574.64,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6693134.65,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6688669.65,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6310296.65,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,4465.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,378373.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,6142392.23,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,6137927.23,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,5759554.23,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,4465.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,378373.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,6142392.23,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,6137927.23,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,5759554.23,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,4465.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,378373.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4789453.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4789453.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4411080.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,378373.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,4789453.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,4789453.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,4411080.36,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.99.00,4.4.90.51.99 - Demais Obras e Instalações,378373.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1352938.87,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1348473.87,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1348473.87,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,4465.0,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,550742.42,11217
+2022,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,550742.42,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,TotalDespesas,Total Geral da Despesa,58585369.2,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,TotalDespesas,Total Geral da Despesa,58489747.45,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,TotalDespesas,Total Geral da Despesa,58387040.68,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,TotalDespesas,Total Geral da Despesa,95621.75,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,TotalDespesas,Total Geral da Despesa,102706.77,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,51765182.66,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,51673655.77,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,51592153.27,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,91526.89,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,81502.5,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,28133274.11,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,28133274.11,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,28133274.11,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,27737012.69,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,27737012.69,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,27737012.69,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",39927.74,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",39927.74,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",39927.74,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,202964.72,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,202964.72,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,202964.72,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,23025115.03,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,23025115.03,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,23025115.03,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4206752.98,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4206752.98,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4206752.98,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.01.00,3.1.90.13.01 - FGTS,102337.13,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.01.00,3.1.90.13.01 - FGTS,102337.13,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.01.00,3.1.90.13.01 - FGTS,102337.13,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4082182.33,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4082182.33,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4082182.33,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,21585.99,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,21585.99,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,21585.99,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.99.00,3.1.90.13.99 - Outras Obrigações Patronais,647.53,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.99.00,3.1.90.13.99 - Outras Obrigações Patronais,647.53,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.99.00,3.1.90.13.99 - Outras Obrigações Patronais,647.53,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,176752.22,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,176752.22,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,176752.22,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,85500.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,85500.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,85500.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DI3.1.91.00.00.00,"3.1.91.00.00 - Aplicação Direta Decorrente de Operação entre Órgãos, Fundos e Entidades Integrantes dos Orçamentos Fiscal e da Seguridade Social",396261.42,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DI3.1.91.00.00.00,"3.1.91.00.00 - Aplicação Direta Decorrente de Operação entre Órgãos, Fundos e Entidades Integrantes dos Orçamentos Fiscal e da Seguridade Social",396261.42,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DI3.1.91.00.00.00,"3.1.91.00.00 - Aplicação Direta Decorrente de Operação entre Órgãos, Fundos e Entidades Integrantes dos Orçamentos Fiscal e da Seguridade Social",396261.42,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DI3.1.91.13.00.00,3.1.91.13.00 - Contribuições Patronais,396261.42,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DI3.1.91.13.00.00,3.1.91.13.00 - Contribuições Patronais,396261.42,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DI3.1.91.13.00.00,3.1.91.13.00 - Contribuições Patronais,396261.42,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DI3.1.91.13.02.00,3.1.91.13.02 - Contribuições previdenciárias - INSS,391538.15,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DI3.1.91.13.02.00,3.1.91.13.02 - Contribuições previdenciárias - INSS,391538.15,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DI3.1.91.13.02.00,3.1.91.13.02 - Contribuições previdenciárias - INSS,391538.15,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DI3.1.91.13.08.00,3.1.91.13.08 - Contribuições previdenciárias - RPPS - pessoal ativo - plano previdenciário,4723.27,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DI3.1.91.13.08.00,3.1.91.13.08 - Contribuições previdenciárias - RPPS - pessoal ativo - plano previdenciário,4723.27,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DI3.1.91.13.08.00,3.1.91.13.08 - Contribuições previdenciárias - RPPS - pessoal ativo - plano previdenciário,4723.27,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,23631908.55,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,23540381.66,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,23458879.16,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,91526.89,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,81502.5,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,78570.96,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,78570.96,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,76839.85,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,1731.11,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,23553337.59,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,23461810.7,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,23382039.31,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,91526.89,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,79771.39,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.14.00.00,3.3.90.14.00 - Diárias - Civil,300.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.14.00.00,3.3.90.14.00 - Diárias - Civil,300.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.14.00.00,3.3.90.14.00 - Diárias - Civil,300.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,8014493.66,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,7998756.92,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,7962966.25,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,15736.74,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,35790.67,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",43851.2,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",43851.2,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",43851.2,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",126235.52,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",126235.52,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",125135.52,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",1100.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,815880.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,815880.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,815880.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.35.00.00,3.3.90.35.00 - Serviços de Consultoria,103525.05,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.35.00.00,3.3.90.35.00 - Serviços de Consultoria,103525.05,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.35.00.00,3.3.90.35.00 - Serviços de Consultoria,73589.93,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.35.00.00,3.3.90.35.00 - Serviços de Consultoria,29935.12,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2309787.72,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2283592.79,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,2283592.79,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,26194.93,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,10327117.13,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,10284841.91,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,10279596.31,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,42275.22,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,5245.6,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,557993.32,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,550673.32,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,542973.32,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,7320.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação (TIC) - Pessoa Jurídica,7700.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,224800.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,224800.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,224800.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,720587.4,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,720587.4,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,720587.4,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,112009.72,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,112009.72,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,112009.72,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,59300.28,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,59300.28,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,59300.28,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,65015.66,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,65015.66,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,65015.66,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,54440.93,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,54440.93,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,54440.93,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6820186.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6816091.68,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,6794887.41,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,4094.86,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,21204.27,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,6332110.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,6328015.14,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,6306810.87,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,4094.86,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,21204.27,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,6332110.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,6328015.14,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,6306810.87,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,4094.86,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,21204.27,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4689715.34,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4689715.34,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4685231.78,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4483.56,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,4689715.34,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,4689715.34,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,4685231.78,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,4483.56,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1342394.66,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1338299.8,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,1321579.09,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,4094.86,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,16720.71,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.61.00.00,4.4.90.61.00 - Aquisição de Imóveis,300000.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.61.00.00,4.4.90.61.00 - Aquisição de Imóveis,300000.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.61.00.00,4.4.90.61.00 - Aquisição de Imóveis,300000.0,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,488076.54,11217
+2023,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,488076.54,11217
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,TotalDespesas,Total Geral da Despesa,76288534.02,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,TotalDespesas,Total Geral da Despesa,76288534.02,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,TotalDespesas,Total Geral da Despesa,75917811.33,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,TotalDespesas,Total Geral da Despesa,370722.69,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,65955453.16,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,65955453.16,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,65687710.81,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,267742.35,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,31027495.1,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,31027495.1,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,31027495.1,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,31027495.1,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,31027495.1,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,31027495.1,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",19320.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",19320.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.01.00.00,"3.1.90.01.00 - Aposentadorias do RPPS, Reserva Remunerada e Reformas dos Militares",19320.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,233593.95,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,233593.95,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,233593.95,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,28632424.36,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,28632424.36,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,28632424.36,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,2016798.8,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,2016798.8,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,2016798.8,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,1914869.57,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,1914869.57,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,1914869.57,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,84368.23,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,84368.23,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,84368.23,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.09.00,3.1.90.13.09 - Seguros de acidentes do trabalho,17561.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.09.00,3.1.90.13.09 - Seguros de acidentes do trabalho,17561.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.09.00,3.1.90.13.09 - Seguros de acidentes do trabalho,17561.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.92.00.00,3.1.90.92.00 - Despesas de Exercícios Anteriores,7700.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.92.00.00,3.1.90.92.00 - Despesas de Exercícios Anteriores,7700.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.92.00.00,3.1.90.92.00 - Despesas de Exercícios Anteriores,7700.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,9657.21,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,9657.21,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,9657.21,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,108000.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,108000.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,108000.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,34927958.06,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,34927958.06,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,34660215.71,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,267742.35,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,54434.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,54434.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,54434.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,34873523.28,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,34873523.28,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,34605780.93,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,267742.35,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,11151544.38,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,11151544.38,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,11149794.51,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,1749.87,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",58687.65,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",58687.65,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",58687.65,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",142420.38,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",142420.38,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",142392.21,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",28.17,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,917880.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,917880.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,917880.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.35.00.00,3.3.90.35.00 - Serviços de Consultoria,210770.16,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.35.00.00,3.3.90.35.00 - Serviços de Consultoria,210770.16,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.35.00.00,3.3.90.35.00 - Serviços de Consultoria,210770.16,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,1632986.95,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,1632986.95,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,1631664.22,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,1322.73,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,16865367.68,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,16865367.68,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,16700071.94,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,165295.74,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,762901.87,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,762901.87,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,762901.87,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,219300.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,219300.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,219300.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,870595.11,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,870595.11,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,870595.11,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,99345.84,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,99345.84,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,99345.84,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,970525.97,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,970525.97,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,970525.97,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,346528.04,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,346528.04,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,346528.04,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,606669.25,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,606669.25,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,606669.25,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,10333080.86,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,10333080.86,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,10230100.52,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,102980.34,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,9777354.98,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,9777354.98,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,9674374.64,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,102980.34,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,9777354.98,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,9777354.98,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,9674374.64,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,102980.34,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,7112502.12,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,7112502.12,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,7019991.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,92510.34,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,7112502.12,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,7112502.12,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,7019991.78,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,92510.34,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,2664852.86,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,2664852.86,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,2654382.86,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,10470.0,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,555725.88,14036
+2024,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,555725.88,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,TotalDespesas,Total Geral da Despesa,85540865.56,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,TotalDespesas,Total Geral da Despesa,84795250.31,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,TotalDespesas,Total Geral da Despesa,83721918.16,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,TotalDespesas,Total Geral da Despesa,745615.25,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,TotalDespesas,Total Geral da Despesa,1073332.15,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,77670935.33,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,76936257.08,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,76022005.93,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,734678.25,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.0.00.00.00.00,3.0.00.00.00 - Despesas Correntes,914251.15,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,39033277.14,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,39033277.14,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.00.00.00.00,3.1.00.00.00 - Pessoal e Encargos Sociais,39033277.14,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,39033277.14,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,39033277.14,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.00.00.00,3.1.90.00.00 - Aplicações Diretas,39033277.14,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,263009.44,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,263009.44,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.03.00.00,3.1.90.03.00 - Pensões do RPPS e do Militar,263009.44,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,34065876.58,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,34065876.58,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.11.00.00,3.1.90.11.00 - Vencimentos e Vantagens Fixas - Pessoal Civil,34065876.58,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4450626.5,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4450626.5,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.00.00,3.1.90.13.00 - Obrigações Patronais,4450626.5,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4351102.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4351102.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.02.00,3.1.90.13.02 - Contribuições Previdenciárias - INSS,4351102.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,99524.08,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,99524.08,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.13.04.00,3.1.90.13.04 - Contribuição de salário-educação,99524.08,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,137664.62,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,137664.62,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.94.00.00,3.1.90.94.00 - Indenizações e Restituições Trabalhistas,137664.62,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,116100.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,116100.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.1.90.99.00.00,3.1.90.99.00 - A Classificar,116100.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,38637658.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,37902979.94,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,36988728.79,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,734678.25,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.00.00.00.00,3.3.00.00.00 - Outras Despesas Correntes,914251.15,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,62196.92,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,62196.92,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.70.00.00.00,3.3.70.00.00 - Transferências a Instituições Multigovernamentais,62196.92,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,38575461.27,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,37840783.02,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,36926531.87,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,734678.25,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.00.00.00,3.3.90.00.00 - Aplicações Diretas,914251.15,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,12159885.97,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,12148987.52,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,11826436.24,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,10898.45,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.30.00.00,3.3.90.30.00 - Material de Consumo,322551.28,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",78751.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",78751.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.31.00.00,"3.3.90.31.00 - Premiações Culturais, Artísticas, Científicas, Desportivas e Outras",78751.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",149762.38,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",149762.38,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.32.00.00,"3.3.90.32.00 - Material, Bem ou Serviço para Distribuição Gratuita",149762.38,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,10788378.69,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,10152270.89,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,9934572.64,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,636107.8,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.34.00.00,3.3.90.34.00 - Outras Despesas de Pessoal decorrentes de Contratos de Terceirização,217698.25,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,880061.3,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,880061.3,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,820199.3,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.36.00.00,3.3.90.36.00 - Outros Serviços de Terceiros - Pessoa Física,59862.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,11024495.22,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,10941635.22,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,10652248.38,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,82860.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.39.00.00,3.3.90.39.00 - Outros Serviços de Terceiros - Pessoa Jurídica,289386.84,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,787495.38,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,782683.38,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,772654.38,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,4812.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.40.00.00,3.3.90.40.00 - Serviços de Tecnologia da Informação e Comunicação - Pessoa Jurídica,10029.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.41.00.00,3.3.90.41.00 - Contribuições,18000.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,228000.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,228000.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.46.00.00,3.3.90.46.00 - Auxílio-Alimentação,228000.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,883445.55,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,883445.55,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.47.00.00,3.3.90.47.00 - Obrigações Tributárias e Contributivas,883445.55,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,2200.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,2200.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.48.00.00,3.3.90.48.00 - Outros Auxílios Financeiros a Pessoas Físicas,2200.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,969142.2,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,969142.2,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,954418.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO3.3.90.91.00.00,3.3.90.91.00 - Sentenças Judiciais,14723.78,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,78489.46,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,78489.46,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.92.00.00,3.3.90.92.00 - Despesas de Exercícios Anteriores,78489.46,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,527354.12,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,527354.12,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO3.3.90.93.00.00,3.3.90.93.00 - Indenizações e Restituições,527354.12,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,7869930.23,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,7858993.23,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,7699912.23,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,10937.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.0.00.00.00.00,4.0.00.00.00 - Despesas de Capital,159081.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,7155033.04,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,7144096.04,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,6985015.04,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,10937.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.00.00.00.00,4.4.00.00.00 - Investimentos,159081.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,7155033.04,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,7144096.04,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,6985015.04,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,10937.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.00.00.00,4.4.90.00.00 - Aplicações Diretas,159081.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4900950.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4900950.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,4758231.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.00.00,4.4.90.51.00 - Obras e Instalações,142719.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,4900950.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,4900950.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,4758231.42,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.51.99.00,4.4.90.51.99 - Outras Obras e Instalações,142719.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,2254082.62,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,2243145.62,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,2226783.62,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Não Processados,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,10937.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Inscrição de Restos a Pagar Processados,DO4.4.90.52.00.00,4.4.90.52.00 - Equipamentos e Material Permanente,16362.0,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.00.00.00.00,4.6.00.00.00 - Amortização da Dívida,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.00.00.00,4.6.90.00.00 - Aplicações Diretas,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Empenhadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Liquidadas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,714897.19,14036
+2025,Prefeitura Municipal de Goianápolis - GO,5208400,GO,DCA-Anexo I-D,Padrão,Despesas Pagas,DO4.6.90.71.00.00,4.6.90.71.00 - Principal da Dívida Contratual Resgatado,714897.19,14036
