@@ -1,6 +1,7 @@
 """Goianápolis em Números: painel público de dados municipais (Streamlit + Plotly)."""
 import importlib
 import sys
+import unicodedata
 
 import pandas as pd
 import plotly.express as px
@@ -13,7 +14,8 @@ for _mod in ("ui", "dados_siconfi", "analises", "alertas", "pagina_auditoria", "
     if _mod in sys.modules:
         importlib.reload(sys.modules[_mod])
 
-from ui import CSS, brl, brl_curto, cabecalho, faltando, grafico, kpis, ler, num, pct
+from ui import (CSS, TINTA, VERDE, brl, brl_curto, cabecalho, definir_secao, faltando, frases, grafico, heroi,
+                kpis, ler, num, pct)
 
 POP_CENSO = 13967  # Censo 2022 (IBGE)
 
@@ -149,7 +151,7 @@ def anos_disponiveis() -> list[int]:
     return sorted(anos, reverse=True) or [2025]
 
 
-st.sidebar.title("Goianápolis em Números")
+st.logo("assets/logo.svg", size="large")
 def ano_padrao(anos):
     """Ano padrão: o mais recente com RREO completo (6º bimestre) no SICONFI."""
     a1 = ler("siconfi_rreo_anexo01.csv")
@@ -190,18 +192,45 @@ def pg_visao():
     desp = v("DESPESAS (EXCETO INTRA", "LIQUIDADAS ATÉ O BIMESTRE")
     pop = pop_ano(ANO)
     per = int(da["periodo"].max())
-    kpis([("População", num(pop), "IBGE: estimativa do ano ou Censo 2022"),
-          ("Receita realizada", brl_curto(rec), brl(rec)),
-          ("Despesa liquidada", brl_curto(desp), brl(desp)),
-          ("Receita per capita", brl(rec / pop) if rec else "n/d")])
-    if per < 6:
-        st.caption(f"{ANO}: dados acumulados até o {per}º bimestre.")
-    banner_alertas()
+    dpf = despesa_por_funcao()
+    x = dpf[dpf["exercicio"] == ANO].sort_values("valor", ascending=False) if dpf is not None else pd.DataFrame()
+
+    sic, _, pn, _ = calcular_alertas(ANO)
+    sic = sic[sic["area"] != "TOTAL (referência)"] if not sic.empty else sic
+    contar = lambda t, cor: int(t["nivel"].str.contains(cor).sum()) if not t.empty else 0  # noqa: E731
+    vermelho, amarelo = contar(sic, "vermelho") + contar(pn, "vermelho"), contar(sic, "amarelo") + contar(pn, "amarelo")
+
+    periodo = "ano fechado" if per == 6 else f"parcial, até o {per}º bimestre"
+    selos = [("info", f"{ANO} · {periodo}"), ("info", f"{num(pop)} habitantes")]
+    if vermelho:
+        selos.append(("alerta", f"{vermelho} alerta(s) vermelho(s) de gasto"))
+    if amarelo:
+        selos.append(("atencao", f"{amarelo} alerta(s) amarelo(s)"))
+    if not (vermelho or amarelo):
+        selos.append(("ok", "nenhum alerta de gasto"))
+    if desp and rec:
+        saldo = rec - desp
+        resultado = (f"<b>sobraram {brl_curto(saldo)}</b>" if saldo >= 0 else f"<b>faltaram {brl_curto(-saldo)}</b>")
+        heroi(f"Goianápolis · GO · {ANO}", brl_curto(desp),
+              f"foi o que a prefeitura efetivamente gastou{' até agora' if per < 6 else ''} em {ANO}: "
+              f"<b>{brl(desp / pop, 0)} por morador</b>. Entraram {brl_curto(rec)}; {resultado}.", selos)
+
+    itens = []
+    if not x.empty and desp:
+        top2 = x.head(2)
+        itens.append((pct(top2["valor"].sum() / desp * 100, 0), f"da despesa foi para {top2['area'].iloc[0]} e "
+                      f"{top2['area'].iloc[1]}." if len(top2) == 2 else "da despesa foi para a maior área.", "ok"))
+    if rec:
+        itens.append((brl(rec / pop, 0), "de receita por morador no ano, somando arrecadação própria e repasses.", "ok"))
+    itens.append((str(vermelho + amarelo), "áreas ou unidades gastaram acima da média histórica do mesmo período. "
+                  "Sinal para acompanhar, não irregularidade.", "alerta" if vermelho else "atencao" if amarelo else "ok"))
+    frases(itens)
+    if vermelho or amarelo:
+        st.page_link(_paginas["Alertas"], label="Ver os alertas em detalhe", icon="🚨")
+
     c1, c2 = st.columns([3, 2])
     with c1:
-        dpf = despesa_por_funcao()
-        if dpf is not None:
-            x = dpf[dpf["exercicio"] == ANO].sort_values("valor", ascending=False)
+        if not x.empty:
             fig = px.treemap(x, path=["area"], values="valor", title=f"Despesa liquidada por área em {ANO}")
             fig.update_traces(texttemplate="%{label}<br>%{percentRoot:.1%}",
                               hovertemplate="%{label}: R$ %{value:,.2f}<extra></extra>")
@@ -215,8 +244,11 @@ def pg_visao():
                 if len(x):
                     serie.append({"ano": ano_, "tipo": rot, "valor": float(x["valor"].iloc[0])})
         if serie:
-            grafico(px.line(pd.DataFrame(serie), x="ano", y="valor", color="tipo", markers=True,
-                            title="Receita × despesa", labels={"valor": "R$", "ano": "Ano", "tipo": ""}))
+            fig = px.line(pd.DataFrame(serie), x="ano", y="valor", color="tipo", markers=True,
+                          title="Receita × despesa", labels={"valor": "R$", "ano": "Ano", "tipo": ""},
+                          color_discrete_map={"Receita": VERDE, "Despesa liquidada": TINTA})
+            fig.update_traces(line_width=3, marker_size=8)
+            grafico(fig)
 
 
 def pg_despesas():
@@ -513,17 +545,6 @@ def calcular_alertas(ano):
     return sic, per, pn, desc
 
 
-def banner_alertas():
-    sic, per, pn, _ = calcular_alertas(ANO)
-    n = lambda t, cor: int(t["nivel"].str.contains(cor).sum()) if not t.empty else 0  # noqa: E731
-    sic_areas = sic[sic["area"] != "TOTAL (referência)"] if not sic.empty else sic
-    vermelho, amarelo = n(sic_areas, "vermelho") + n(pn, "vermelho"), n(sic_areas, "amarelo") + n(pn, "amarelo")
-    if vermelho or amarelo:
-        msg = (f"**Alertas de gasto em {ANO}:** {vermelho} 🔴 e {amarelo} 🟡 (áreas e unidades com gasto acima da "
-               "média histórica do mesmo período). Veja a página **Alertas**.")
-        (st.error if vermelho else st.warning)(msg)
-
-
 def pg_alertas():
     from alertas import ANOS_HISTORICO, LIMIAR_AMARELO, LIMIAR_VERMELHO
     cabecalho("Alertas automáticos de gasto",
@@ -543,10 +564,10 @@ def pg_alertas():
         _tabela_alertas(sic, "area", "Área")
         g = sic.dropna(subset=["variacao_pct"])
         fig = px.bar(g.sort_values("variacao_pct"), x="variacao_pct", y="area", orientation="h", color="nivel",
-                     color_discrete_map={"🔴 vermelho": "#C0504D", "🟡 amarelo": "#E0A526", "🟢 normal": "#1B6F4A"},
+                     color_discrete_map={"🔴 vermelho": "#E8553A", "🟡 amarelo": "#E9A21B", "🟢 normal": "#0A8F6E"},
                      title="Variação sobre a média histórica (%)", labels={"variacao_pct": "%", "area": "", "nivel": ""})
-        fig.add_vline(x=LIMIAR_AMARELO, line_dash="dot", line_color="#E0A526")
-        fig.add_vline(x=LIMIAR_VERMELHO, line_dash="dot", line_color="#C0504D")
+        fig.add_vline(x=LIMIAR_AMARELO, line_dash="dot", line_color="#E9A21B")
+        fig.add_vline(x=LIMIAR_VERMELHO, line_dash="dot", line_color="#E8553A")
         grafico(fig, None)
     st.subheader("Unidades do PNCP (valor homologado)")
     if pn.empty:
@@ -586,10 +607,32 @@ def pg_conciliacao():
     pagina(ANO, despesa_por_funcao)
 
 
-PAGINAS = {"Visão geral": pg_visao, "Despesas": pg_despesas, "Receitas e tributos": pg_receitas,
-           "Pessoal (LRF)": pg_pessoal, "Projeção": pg_projecao, "Transferências": pg_transferencias, "Compras": pg_compras, "Fornecedores": pg_fornecedores, "Capilaridade": pg_capilaridade,
-           "Saúde": pg_saude, "Educação": pg_educacao, "Demais áreas": pg_demais, "Alertas": pg_alertas, "Auditoria": pg_auditoria, "Conciliação": pg_conciliacao, "Denúncia anônima": pg_denuncia, "Sobre os dados": pg_sobre}
-escolha = st.sidebar.radio("Páginas", list(PAGINAS))
+# Navegação em grupos: o visitante encontra primeiro o panorama e sabe onde estão as conferências.
+GRUPOS = {
+    "Panorama": [("Visão geral", pg_visao, "📊"), ("Alertas", pg_alertas, "🚨")],
+    "Dinheiro": [("Receitas e tributos", pg_receitas, "💰"), ("Despesas", pg_despesas, "💸"),
+                 ("Pessoal (LRF)", pg_pessoal, "👥"), ("Transferências", pg_transferencias, "🔁"),
+                 ("Projeção", pg_projecao, "📈")],
+    "Áreas": [("Saúde", pg_saude, "🏥"), ("Educação", pg_educacao, "🎓"), ("Demais áreas", pg_demais, "🧭"),
+              ("Capilaridade", pg_capilaridade, "🔬")],
+    "Compras": [("Compras", pg_compras, "🧾"), ("Fornecedores", pg_fornecedores, "🏢")],
+    "Confiança": [("Conciliação", pg_conciliacao, "✅"), ("Auditoria", pg_auditoria, "🔎"),
+                  ("Sobre os dados", pg_sobre, "📚")],
+    "Participe": [("Denúncia anônima", pg_denuncia, "📣")],
+}
+
+
+def _pagina(grupo, titulo, funcao, icone, padrao=False):
+    def executar():
+        definir_secao(grupo)
+        funcao()
+    slug = unicodedata.normalize("NFKD", titulo).encode("ascii", "ignore").decode().lower()
+    slug = "".join(ch if ch.isalnum() else "-" for ch in slug).strip("-").replace("--", "-")
+    return st.Page(executar, title=titulo, icon=icone, url_path=slug, default=padrao)
+
+
+_paginas = {t: _pagina(g, t, f, i, padrao=(t == "Visão geral")) for g, itens in GRUPOS.items() for t, f, i in itens}
+navegacao = st.navigation({g: [_paginas[t] for t, _, _ in itens] for g, itens in GRUPOS.items()}, expanded=True)
 
 
 def rodape_sidebar():
@@ -609,4 +652,4 @@ def rodape_sidebar():
 
 
 rodape_sidebar()
-PAGINAS[escolha]()
+navegacao.run()
