@@ -22,6 +22,7 @@ ELEMENTOS = {
     "1.11": ("Salários do funcionalismo", "vencimentos e vantagens fixas dos servidores"),
     "1.13": ("Encargos patronais", "INSS e outras contribuições pagas pela prefeitura sobre a folha"),
     "1.16": ("Outras despesas variáveis de pessoal", "horas extras, plantões"),
+    "1.92": ("Pessoal de anos anteriores", "salários de exercícios passados pagos agora"),
     "1.94": ("Indenizações trabalhistas", ""), "1.99": ("Pessoal a classificar", ""),
     "2.21": ("Juros da dívida", ""),
     "3.08": ("Benefícios assistenciais", ""), "3.14": ("Diárias", "viagens a serviço"),
